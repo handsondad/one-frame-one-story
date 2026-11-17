@@ -1,4 +1,8 @@
+import { archaeopteryxBerlin } from "./archaeopteryx-berlin.ts";
+import { bunianScroll } from "./bunian-scroll.ts";
+import { cottonMillGirl } from "./cotton-mill-girl.ts";
 import { curieLab } from "./curie-lab.ts";
+import { damingHunyiMap } from "./daming-hunyi-map.ts";
 import { darwinTree } from "./darwin-tree.ts";
 import { diamondSutra } from "./diamond-sutra.ts";
 import { dnaModel } from "./dna-model.ts";
@@ -13,11 +17,14 @@ import { hubbleDeepField } from "./hubble-deep-field.ts";
 import { hubbleVar } from "./hubble-var.ts";
 import { ibmAtoms } from "./ibm-atoms.ts";
 import { ivfEmbryo } from "./ivf-embryo.ts";
+import { keelingCurve } from "./keeling-curve.ts";
 import { kunyuMap } from "./kunyu-map.ts";
+import { lavoisierLab } from "./lavoisier-lab.ts";
 import { lunchSkyscraper } from "./lunch-skyscraper.ts";
 import { m87BlackHole } from "./m87-black-hole.ts";
 import { marchOnWashington } from "./march-on-washington.ts";
 import { mendeleevTable } from "./mendeleev-table.ts";
+import { migrantMother } from "./migrant-mother.ts";
 import { monaLisa } from "./mona-lisa.ts";
 import { moonAldrin } from "./moon-aldrin.ts";
 import { muybridgeHorse } from "./muybridge-horse.ts";
@@ -43,6 +50,8 @@ import { terracottaArmy } from "./terracotta-army.ts";
 import { tobaccoMosaicVirus } from "./tobacco-mosaic-virus.ts";
 import { trinityTest } from "./trinity-test.ts";
 import type { Story } from "./types.ts";
+import { vitruvianMan } from "./vitruvian-man.ts";
+import { wegenerContinents } from "./wegener-continents.ts";
 import { wrightFlight } from "./wright-flight.ts";
 
 /** 晾衣杆上从左到右的顺序：按图产生的年份 */
@@ -92,6 +101,15 @@ export const STORIES: readonly Story[] = [
   lunchSkyscraper,
   nagasakiCloud,
   moonAldrin,
+  bunianScroll,
+  damingHunyiMap,
+  vitruvianMan,
+  lavoisierLab,
+  archaeopteryxBerlin,
+  cottonMillGirl,
+  wegenerContinents,
+  migrantMother,
+  keelingCurve,
 ].sort((a, b) => a.year - b.year);
 
 export const storyById = (id: string) => STORIES.find((s) => s.id === id);

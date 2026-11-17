@@ -50,7 +50,8 @@ async function download(commons, crop) {
   const size = await imageinfo(commons, "iiprop=size");
   if (!size) throw new Error(`Commons 上找不到 ${commons}`);
   // 只要一块时多下一些，裁完还有 WIDTH 宽
-  const want = Math.min(Math.round(WIDTH / (crop?.w ?? 1)), size.width - 1);
+  const target = Math.round(WIDTH / (crop?.w ?? 1));
+  const want = commons.toLowerCase().endsWith(".svg") ? target : Math.min(target, size.width - 1);
   const url = (await imageinfo(commons, `iiprop=url&iiurlwidth=${want}`)).thumburl;
   for (let attempt = 0; attempt < 4; attempt++) {
     const res = await fetch(url, { headers: HEADERS });

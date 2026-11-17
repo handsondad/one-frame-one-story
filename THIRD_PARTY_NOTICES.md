@@ -8,8 +8,12 @@
 | 三星堆青铜纵目面具（商代晚期） | Gary Todd 摄，三星堆博物馆藏 | [CC0](https://creativecommons.org/publicdomain/zero/1.0/) | [Ancient Bronze Mask from Sanxingdui with Protruding Eyes & Ears a.jpg](https://commons.wikimedia.org/wiki/File:Ancient_Bronze_Mask_from_Sanxingdui_with_Protruding_Eyes_%26_Ears_a.jpg) |
 | 兵马俑一号坑（秦代） | Jmhullot | [CC BY 3.0](https://creativecommons.org/licenses/by/3.0/) | [Terracotta Army, View of Pit 1.jpg](https://commons.wikimedia.org/wiki/File:Terracotta_Army,_View_of_Pit_1.jpg) |
 | 罗塞塔石碑（公元前 196） | Hans Hillewaert | [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) | [Rosetta Stone.JPG](https://commons.wikimedia.org/wiki/File:Rosetta_Stone.JPG) |
+| 步辇图（约 641，北宋摹本） | 传唐·阎立本绘，北京故宫博物院藏 | 公有领域 | [Yan Liben. Emperor Taizong gives an audience to Gar, the ambassador of Tibet. Palace Museum, Beijing.jpg](https://commons.wikimedia.org/wiki/File:Yan_Liben._Emperor_Taizong_gives_an_audience_to_Gar,_the_ambassador_of_Tibet._Palace_Museum,_Beijing.jpg) |
 | 敦煌《金刚经》卷首画（868） | 王玠出资刻印，大英图书馆藏 | 公有领域 | [Jingangjing.jpg](https://commons.wikimedia.org/wiki/File:Jingangjing.jpg) |
 | 清明上河图·虹桥（北宋） | 张择端，北京故宫博物院藏 | 公有领域 | [Along the River During the Qingming Festival (detail of original).jpg](https://commons.wikimedia.org/wiki/File:Along_the_River_During_the_Qingming_Festival_(detail_of_original).jpg) |
+| 大明混一图（1389） | 明代宫廷画师绘，清康熙加贴满文签，中国第一历史档案馆藏 | 公有领域 | [Da-ming-hun-yi-tu.jpg](https://commons.wikimedia.org/wiki/File:Da-ming-hun-yi-tu.jpg) |
+| 混一疆理历代国都之图·非洲与地中海局部（1402） | 权近、李荟等编绘，日本本光寺藏摹本 | 公有领域 | [Africa and the Mediterranean in the Kangnido map.jpg](https://commons.wikimedia.org/wiki/File:Africa_and_the_Mediterranean_in_the_Kangnido_map.jpg) |
+| 维特鲁威人（约 1490） | 列奥纳多·达·芬奇绘，威尼斯学院美术馆藏；Luc Viatour 摄 | 公有领域 | [Da Vinci Vitruve Luc Viatour.jpg](https://commons.wikimedia.org/wiki/File:Da_Vinci_Vitruve_Luc_Viatour.jpg) |
 | 蒙娜丽莎（约 1503—1519） | 列奥纳多·达·芬奇，卢浮宫藏；C2RMF 扫描 | 公有领域 | [Mona Lisa, by Leonardo da Vinci, from C2RMF retouched.jpg](https://commons.wikimedia.org/wiki/File:Mona_Lisa,_by_Leonardo_da_Vinci,_from_C2RMF_retouched.jpg) |
 | 坤舆万国全图（1602，彩色摹本） | 利玛窦、李之藻；日本东北大学图书馆藏 | 公有领域 | [Kunyu Wanguo Quantu (坤輿萬國全圖).jpg](https://commons.wikimedia.org/wiki/File:Kunyu_Wanguo_Quantu_(%E5%9D%A4%E8%BC%BF%E8%90%AC%E5%9C%8B%E5%85%A8%E5%9C%96).jpg) |
 | 神奈川冲浪里（约 1831） | 葛饰北斋，大都会艺术博物馆藏（JP1847） | 公有领域 | [Tsunami by hokusai 19th century.jpg](https://commons.wikimedia.org/wiki/File:Tsunami_by_hokusai_19th_century.jpg) |
@@ -17,17 +21,24 @@
 | 南丁格尔玫瑰图（1858） | Florence Nightingale | 公有领域 | [Nightingale-mortality.jpg](https://commons.wikimedia.org/wiki/File:Nightingale-mortality.jpg) |
 | 伽利略的月面图（1610） | Galileo Galilei | 公有领域 | [Galileo's sketches of the moon.png](https://commons.wikimedia.org/wiki/File:Galileo%27s_sketches_of_the_moon.png) |
 | 胡克的软木切片（1665） | Robert Hooke | 公有领域 | [RobertHookeMicrographia1665.jpg](https://commons.wikimedia.org/wiki/File:RobertHookeMicrographia1665.jpg) |
+| 拉瓦锡夫妇像（1788） | Jacques-Louis David，纽约大都会艺术博物馆藏 | 公有领域 | [David - Portrait of Monsieur Lavoisier and His Wife.jpg](https://commons.wikimedia.org/wiki/File:David_-_Portrait_of_Monsieur_Lavoisier_and_His_Wife.jpg) |
+| 《化学基础论》仪器铜版画（1789，图版五） | Marie-Anne Paulze Lavoisier 绘刻，科学史研究所藏 | 公有领域 | [Traité Élémentaire de Chimie … (page 22).jpg](https://commons.wikimedia.org/wiki/File:Trait%C3%A9_%C3%89l%C3%A9mentaire_de_Chimie_-_DPLA_-_7f69f306652cefd113d85b858be8b900_(page_22).jpg) |
 | 达尔文的生命之树（1837） | Charles Darwin | 公有领域 | [Darwin Tree 1837.png](https://commons.wikimedia.org/wiki/File:Darwin_Tree_1837.png) |
 | 门捷列夫的周期表手稿（1869） | Dmitri Mendeleev | 公有领域 | [Mendeleev law.jpg](https://commons.wikimedia.org/wiki/File:Mendeleev_law.jpg) |
+| 柏林始祖鸟化石（约 1874—1876 发现） | H. Raab（User:Vesta）摄，柏林自然博物馆藏 | [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/) | [Archaeopteryx lithographica (Berlin specimen).jpg](https://commons.wikimedia.org/wiki/File:Archaeopteryx_lithographica_(Berlin_specimen).jpg) |
 | 奔跑的马（1878） | Eadweard Muybridge | 公有领域 | [The Horse in Motion high res.jpg](https://commons.wikimedia.org/wiki/File:The_Horse_in_Motion_high_res.jpg) |
 | 星月夜（1889） | Vincent van Gogh，纽约现代艺术博物馆藏 | 公有领域 | [Van Gogh - Starry Night - Google Art Project.jpg](https://commons.wikimedia.org/wiki/File:Van_Gogh_-_Starry_Night_-_Google_Art_Project.jpg) |
 | 戴戒指的手（1895） | Wilhelm Röntgen | 公有领域 | [First medical X-ray … 18951222.jpg](https://commons.wikimedia.org/wiki/File:First_medical_X-ray_by_Wilhelm_R%C3%B6ntgen_of_his_wife_Anna_Bertha_Ludwig%27s_hand_-_18951222.jpg) |
 | 莱特兄弟首飞（1903） | John T. Daniels，美国国会图书馆藏 | 公有领域 | [First flight2.jpg](https://commons.wikimedia.org/wiki/File:First_flight2.jpg) |
 | 居里夫妇在实验室（约 1904） | 摄影师不详 | 公有领域 | [Pierre and Marie Curie.jpg](https://commons.wikimedia.org/wiki/File:Pierre_and_Marie_Curie.jpg) |
+| 纺织厂里的小纺纱工萨迪（1908） | Lewis Wickes Hine，美国国会图书馆藏 | 公有领域 | [Sadie Pfeifer … LOC cph.3a13674.jpg](https://commons.wikimedia.org/wiki/File:Sadie_Pfeifer,_48_inches_high,_has_worked_half_a_year._One_of_the_many_small_children_at_work_in_Lancaster_Cotton_Mills._Nov._30,_1908._LOC_cph.3a13674.jpg) |
 | 日全食底片（1919） | Frank Watson Dyson, Arthur Eddington, Charles Rundle Davidson | 公有领域 | [1919 eclipse positive.jpg](https://commons.wikimedia.org/wiki/File:1919_eclipse_positive.jpg) |
 | 哈勃的“VAR!”底片（1923） | NASA, ESA and Z. Levay (STScI); NASA, ESA and the Hubble Heritage Team (STScI/AURA)；仙女座照片 R. Gendler；底片 Carnegie Observatories | [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) | [Snapshots of the star that changed the Universe (opo1115d).jpg](https://commons.wikimedia.org/wiki/File:Snapshots_of_the_star_that_changed_the_Universe_(opo1115d).jpg) |
 | 第五届索尔维会议合影（1927） | Benjamin Couprie | 公有领域 | [Solvay conference 1927.jpg](https://commons.wikimedia.org/wiki/File:Solvay_conference_1927.jpg) |
+| 魏格纳的大陆漂移图（1929，《海陆的起源》第 4 版） | Alfred Wegener | 公有领域 | [De Wegener Kontinente 018.jpg](https://commons.wikimedia.org/wiki/File:De_Wegener_Kontinente_018.jpg) |
+| 玛丽·萨普与希曾全球海底地形图（1977，伯兰彩绘） | Marie Tharp、Bruce Heezen、Heinrich Berann，美国国会图书馆藏 | [CC0](https://creativecommons.org/publicdomain/zero/1.0/) | [(Manuscript painting of Heezen-Tharp World ocean floor map by Berann).jpg](https://commons.wikimedia.org/wiki/File:(Manuscript_painting_of_Heezen-Tharp_World_ocean_floor_map_by_Berann).jpg) |
 | 摩天楼顶上的午餐（1932） | 摄影师不详（曾被认为是 Charles C. Ebbets），Acme Newspictures 发行 | 公有领域（美国发表时未续展版权） | [Lunch atop a Skyscraper - Charles Clyde Ebbets.jpg](https://commons.wikimedia.org/wiki/File:Lunch_atop_a_Skyscraper_-_Charles_Clyde_Ebbets.jpg) |
+| 移居的母亲（1936，特写与营地帐篷远景） | Dorothea Lange，美国国会图书馆 FSA 档案 | 公有领域 | [Lange-MigrantMother02.jpg](https://commons.wikimedia.org/wiki/File:Lange-MigrantMother02.jpg) · [03054.jpg](https://commons.wikimedia.org/wiki/File:Migrant_agricultural_worker%27s_family._Seven_hungry_children._Mother_aged_thirty-two,_03054.jpg) |
 | 弗莱明发现青霉素的培养皿（1963 年复制品） | Wellcome Collection 摄，伦敦科学博物馆藏 | [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) | [Culture plate of penicillium mould, London, England Wellcome L0059173.jpg](https://commons.wikimedia.org/wiki/File:Culture_plate_of_penicillium_mould,_London,_England_Wellcome_L0059173.jpg) |
 | 烟草花叶病毒（现代电子显微镜照片） | International Committee on Taxonomy of Viruses（ICTV） | [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) | [TMV under TEM.png](https://commons.wikimedia.org/wiki/File:TMV_under_TEM.png) |
 | “三位一体”核试验（1945） | Jack Aeby，美国能源部 | 公有领域 | [TrinityColorLarge.jpg](https://commons.wikimedia.org/wiki/File:TrinityColorLarge.jpg) |
@@ -35,6 +46,8 @@
 | 从香烧岛看长崎的蘑菇云（1945） | 松田弘道，长崎原爆资料馆藏 | 公有领域（日本旧照片） | [Atomic cloud over Nagasaki from Koyagi-jima.jpeg](https://commons.wikimedia.org/wiki/File:Atomic_cloud_over_Nagasaki_from_Koyagi-jima.jpeg) |
 | DNA 双螺旋模型复制品（DNA 故事里换上的第二张图） | Flocci Nivis 摄，柏林医学史博物馆藏 | [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) | [20251019 Replica DNA double helix model Berlin 03.jpg](https://commons.wikimedia.org/wiki/File:20251019_Replica_DNA_double_helix_model_Berlin_03.jpg) |
 | 第一张扫描进计算机的照片（1957） | Russell A. Kirsch，NIST | 公有领域 | [NBSFirstScanImage.jpg](https://commons.wikimedia.org/wiki/File:NBSFirstScanImage.jpg) |
+| 基林曲线：莫纳罗亚二氧化碳浓度（1958—2025） | Oeneis（数据：NOAA GML & Scripps） | [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) | [Mauna Loa CO2 monthly mean concentration.svg](https://commons.wikimedia.org/wiki/File:Mauna_Loa_CO2_monthly_mean_concentration.svg) |
+| 夏威夷莫纳罗亚火山观测站（2006） | Forrest M. Mims III，NOAA Photo Library | 公有领域 | [Pl23 wea03453 - Mauna Loa Observatory in 2006.jpg](https://commons.wikimedia.org/wiki/File:Pl23_wea03453_-_Mauna_Loa_Observatory_in_2006.jpg) |
 | 向华盛顿进军（1963） | 美国国家档案馆（NARA 542045） | 公有领域 | [Civil Rights March on Washington, D.C. … NARA - 542045.tif](https://commons.wikimedia.org/wiki/File:Civil_Rights_March_on_Washington,_D.C._(A_wide-angle_view_of_marchers_along_the_mall,_showing_the_Reflecting_Pool_and..._-_NARA_-_542045.tif) |
 | 地出（1968） | NASA / Bill Anders | 公有领域 | [NASA-Apollo8-Dec24-Earthrise.jpg](https://commons.wikimedia.org/wiki/File:NASA-Apollo8-Dec24-Earthrise.jpg) |
 | 登月者（1969，原始底片） | Neil Armstrong，NASA（AS11-40-5903） | 公有领域 | [Aldrin Apollo 11 original.jpg](https://commons.wikimedia.org/wiki/File:Aldrin_Apollo_11_original.jpg) |
