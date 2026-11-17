@@ -1,0 +1,16 @@
+node_modules/
+dist/
+*.tsbuildinfo
+vite.config.js
+vite.config.d.ts
+*.log
+.env
+.env.*
+
+# snapshot 工具的输出，自查用，不进仓库
+snapshots/
+# 完整字库，npm run font 下载
+tools/.cache/
+
+.vscode/
+.DS_Store

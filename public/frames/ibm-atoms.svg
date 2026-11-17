@@ -1,0 +1,131 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" width="1600" height="900">
+  <defs>
+    <linearGradient id="slab" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#6c7078"/>
+      <stop offset="0.6" stop-color="#4c5058"/>
+      <stop offset="1" stop-color="#2e3138"/>
+    </linearGradient>
+    <linearGradient id="cone" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#f4fdff"/>
+      <stop offset="0.3" stop-color="#7fe3f2"/>
+      <stop offset="0.75" stop-color="#1f8fb8"/>
+      <stop offset="1" stop-color="#0d4c6e"/>
+    </linearGradient>
+    <filter id="soft" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="8"/></filter>
+    <filter id="tiny" x="-100%" y="-100%" width="300%" height="300%"><feGaussianBlur stdDeviation="3"/></filter>
+    <filter id="grain" x="0" y="0" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.035" numOctaves="2" seed="7"/>
+      <feColorMatrix values="0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0 0 0 0.16 0"/>
+      <feComposite in2="SourceGraphic" operator="in"/>
+    </filter>
+  </defs>
+  <rect width="1600" height="900" fill="#050608"/>
+  <polygon points="90,150 1530,110 1560,820 50,860" fill="url(#slab)"/>
+  <polygon points="90,150 1530,110 1560,820 50,860" fill="#fff" filter="url(#grain)"/>
+  <polygon points="50,860 1560,820 1560,845 50,885" fill="#1c1e23"/>
+  <ellipse cx="202" cy="297" rx="38" ry="15.959999999999999" fill="#000" opacity="0.45" filter="url(#soft)"/>
+    <path d="M 154 299 C 171.1 297, 178.7 215, 192 215 C 205.3 215, 212.9 297, 230 299 Z" fill="url(#cone)"/>
+    <ellipse cx="188" cy="229" rx="7" ry="10" fill="#fff" opacity="0.85" filter="url(#tiny)"/>
+  <ellipse cx="294.8" cy="297" rx="38" ry="15.959999999999999" fill="#000" opacity="0.45" filter="url(#soft)"/>
+    <path d="M 246.8 299 C 263.90000000000003 297, 271.5 215, 284.8 215 C 298.1 215, 305.7 297, 322.8 299 Z" fill="url(#cone)"/>
+    <ellipse cx="280.8" cy="229" rx="7" ry="10" fill="#fff" opacity="0.85" filter="url(#tiny)"/>
+  <ellipse cx="387.59999999999997" cy="297" rx="38" ry="15.959999999999999" fill="#000" opacity="0.45" filter="url(#soft)"/>
+    <path d="M 339.59999999999997 299 C 356.7 297, 364.29999999999995 215, 377.59999999999997 215 C 390.9 215, 398.49999999999994 297, 415.59999999999997 299 Z" fill="url(#cone)"/>
+    <ellipse cx="373.59999999999997" cy="229" rx="7" ry="10" fill="#fff" opacity="0.85" filter="url(#tiny)"/>
+  <ellipse cx="294.8" cy="396" rx="38" ry="15.959999999999999" fill="#000" opacity="0.45" filter="url(#soft)"/>
+    <path d="M 246.8 398 C 263.90000000000003 396, 271.5 314, 284.8 314 C 298.1 314, 305.7 396, 322.8 398 Z" fill="url(#cone)"/>
+    <ellipse cx="280.8" cy="328" rx="7" ry="10" fill="#fff" opacity="0.85" filter="url(#tiny)"/>
+  <ellipse cx="294.8" cy="495" rx="38" ry="15.959999999999999" fill="#000" opacity="0.45" filter="url(#soft)"/>
+    <path d="M 246.8 497 C 263.90000000000003 495, 271.5 413, 284.8 413 C 298.1 413, 305.7 495, 322.8 497 Z" fill="url(#cone)"/>
+    <ellipse cx="280.8" cy="427" rx="7" ry="10" fill="#fff" opacity="0.85" filter="url(#tiny)"/>
+  <ellipse cx="294.8" cy="594.0000000000001" rx="38" ry="15.959999999999999" fill="#000" opacity="0.45" filter="url(#soft)"/>
+    <path d="M 246.8 596.0000000000001 C 263.90000000000003 594.0000000000001, 271.5 512.0000000000001, 284.8 512.0000000000001 C 298.1 512.0000000000001, 305.7 594.0000000000001, 322.8 596.0000000000001 Z" fill="url(#cone)"/>
+    <ellipse cx="280.8" cy="526.0000000000001" rx="7" ry="10" fill="#fff" opacity="0.85" filter="url(#tiny)"/>
+  <ellipse cx="202" cy="693" rx="38" ry="15.959999999999999" fill="#000" opacity="0.45" filter="url(#soft)"/>
+    <path d="M 154 695 C 171.1 693, 178.7 611, 192 611 C 205.3 611, 212.9 693, 230 695 Z" fill="url(#cone)"/>
+    <ellipse cx="188" cy="625" rx="7" ry="10" fill="#fff" opacity="0.85" filter="url(#tiny)"/>
+  <ellipse cx="294.8" cy="693" rx="38" ry="15.959999999999999" fill="#000" opacity="0.45" filter="url(#soft)"/>
+    <path d="M 246.8 695 C 263.90000000000003 693, 271.5 611, 284.8 611 C 298.1 611, 305.7 693, 322.8 695 Z" fill="url(#cone)"/>
+    <ellipse cx="280.8" cy="625" rx="7" ry="10" fill="#fff" opacity="0.85" filter="url(#tiny)"/>
+  <ellipse cx="387.59999999999997" cy="693" rx="38" ry="15.959999999999999" fill="#000" opacity="0.45" filter="url(#soft)"/>
+    <path d="M 339.59999999999997 695 C 356.7 693, 364.29999999999995 611, 377.59999999999997 611 C 390.9 611, 398.49999999999994 693, 415.59999999999997 695 Z" fill="url(#cone)"/>
+    <ellipse cx="373.59999999999997" cy="625" rx="7" ry="10" fill="#fff" opacity="0.85" filter="url(#tiny)"/>
+  <ellipse cx="573.1999999999999" cy="297" rx="38" ry="15.959999999999999" fill="#000" opacity="0.45" filter="url(#soft)"/>
+    <path d="M 525.1999999999999 299 C 542.3 297, 549.9 215, 563.1999999999999 215 C 576.4999999999999 215, 584.0999999999999 297, 601.1999999999999 299 Z" fill="url(#cone)"/>
+    <ellipse cx="559.1999999999999" cy="229" rx="7" ry="10" fill="#fff" opacity="0.85" filter="url(#tiny)"/>
+  <ellipse cx="573.1999999999999" cy="396" rx="38" ry="15.959999999999999" fill="#000" opacity="0.45" filter="url(#soft)"/>
+    <path d="M 525.1999999999999 398 C 542.3 396, 549.9 314, 563.1999999999999 314 C 576.4999999999999 314, 584.0999999999999 396, 601.1999999999999 398 Z" fill="url(#cone)"/>
+    <ellipse cx="559.1999999999999" cy="328" rx="7" ry="10" fill="#fff" opacity="0.85" filter="url(#tiny)"/>
+  <ellipse cx="573.1999999999999" cy="495" rx="38" ry="15.959999999999999" fill="#000" opacity="0.45" filter="url(#soft)"/>
+    <path d="M 525.1999999999999 497 C 542.3 495, 549.9 413, 563.1999999999999 413 C 576.4999999999999 413, 584.0999999999999 495, 601.1999999999999 497 Z" fill="url(#cone)"/>
+    <ellipse cx="559.1999999999999" cy="427" rx="7" ry="10" fill="#fff" opacity="0.85" filter="url(#tiny)"/>
+  <ellipse cx="573.1999999999999" cy="594.0000000000001" rx="38" ry="15.959999999999999" fill="#000" opacity="0.45" filter="url(#soft)"/>
+    <path d="M 525.1999999999999 596.0000000000001 C 542.3 594.0000000000001, 549.9 512.0000000000001, 563.1999999999999 512.0000000000001 C 576.4999999999999 512.0000000000001, 584.0999999999999 594.0000000000001, 601.1999999999999 596.0000000000001 Z" fill="url(#cone)"/>
+    <ellipse cx="559.1999999999999" cy="526.0000000000001" rx="7" ry="10" fill="#fff" opacity="0.85" filter="url(#tiny)"/>
+  <ellipse cx="573.1999999999999" cy="693" rx="38" ry="15.959999999999999" fill="#000" opacity="0.45" filter="url(#soft)"/>
+    <path d="M 525.1999999999999 695 C 542.3 693, 549.9 611, 563.1999999999999 611 C 576.4999999999999 611, 584.0999999999999 693, 601.1999999999999 695 Z" fill="url(#cone)"/>
+    <ellipse cx="559.1999999999999" cy="625" rx="7" ry="10" fill="#fff" opacity="0.85" filter="url(#tiny)"/>
+  <ellipse cx="666" cy="297" rx="38" ry="15.959999999999999" fill="#000" opacity="0.45" filter="url(#soft)"/>
+    <path d="M 618 299 C 635.1 297, 642.7 215, 656 215 C 669.3 215, 676.9 297, 694 299 Z" fill="url(#cone)"/>
+    <ellipse cx="652" cy="229" rx="7" ry="10" fill="#fff" opacity="0.85" filter="url(#tiny)"/>
+  <ellipse cx="758.8000000000001" cy="297" rx="38" ry="15.959999999999999" fill="#000" opacity="0.45" filter="url(#soft)"/>
+    <path d="M 710.8000000000001 299 C 727.9000000000001 297, 735.5000000000001 215, 748.8000000000001 215 C 762.1 215, 769.7 297, 786.8000000000001 299 Z" fill="url(#cone)"/>
+    <ellipse cx="744.8000000000001" cy="229" rx="7" ry="10" fill="#fff" opacity="0.85" filter="url(#tiny)"/>
+  <ellipse cx="666" cy="495" rx="38" ry="15.959999999999999" fill="#000" opacity="0.45" filter="url(#soft)"/>
+    <path d="M 618 497 C 635.1 495, 642.7 413, 656 413 C 669.3 413, 676.9 495, 694 497 Z" fill="url(#cone)"/>
+    <ellipse cx="652" cy="427" rx="7" ry="10" fill="#fff" opacity="0.85" filter="url(#tiny)"/>
+  <ellipse cx="758.8000000000001" cy="495" rx="38" ry="15.959999999999999" fill="#000" opacity="0.45" filter="url(#soft)"/>
+    <path d="M 710.8000000000001 497 C 727.9000000000001 495, 735.5000000000001 413, 748.8000000000001 413 C 762.1 413, 769.7 495, 786.8000000000001 497 Z" fill="url(#cone)"/>
+    <ellipse cx="744.8000000000001" cy="427" rx="7" ry="10" fill="#fff" opacity="0.85" filter="url(#tiny)"/>
+  <ellipse cx="666" cy="693" rx="38" ry="15.959999999999999" fill="#000" opacity="0.45" filter="url(#soft)"/>
+    <path d="M 618 695 C 635.1 693, 642.7 611, 656 611 C 669.3 611, 676.9 693, 694 695 Z" fill="url(#cone)"/>
+    <ellipse cx="652" cy="625" rx="7" ry="10" fill="#fff" opacity="0.85" filter="url(#tiny)"/>
+  <ellipse cx="758.8000000000001" cy="693" rx="38" ry="15.959999999999999" fill="#000" opacity="0.45" filter="url(#soft)"/>
+    <path d="M 710.8000000000001 695 C 727.9000000000001 693, 735.5000000000001 611, 748.8000000000001 611 C 762.1 611, 769.7 693, 786.8000000000001 695 Z" fill="url(#cone)"/>
+    <ellipse cx="744.8000000000001" cy="625" rx="7" ry="10" fill="#fff" opacity="0.85" filter="url(#tiny)"/>
+  <ellipse cx="851.6" cy="396" rx="38" ry="15.959999999999999" fill="#000" opacity="0.45" filter="url(#soft)"/>
+    <path d="M 803.6 398 C 820.7 396, 828.3000000000001 314, 841.6 314 C 854.9 314, 862.5 396, 879.6 398 Z" fill="url(#cone)"/>
+    <ellipse cx="837.6" cy="328" rx="7" ry="10" fill="#fff" opacity="0.85" filter="url(#tiny)"/>
+  <ellipse cx="851.6" cy="594.0000000000001" rx="38" ry="15.959999999999999" fill="#000" opacity="0.45" filter="url(#soft)"/>
+    <path d="M 803.6 596.0000000000001 C 820.7 594.0000000000001, 828.3000000000001 512.0000000000001, 841.6 512.0000000000001 C 854.9 512.0000000000001, 862.5 594.0000000000001, 879.6 596.0000000000001 Z" fill="url(#cone)"/>
+    <ellipse cx="837.6" cy="526.0000000000001" rx="7" ry="10" fill="#fff" opacity="0.85" filter="url(#tiny)"/>
+  <ellipse cx="1037.2" cy="297" rx="38" ry="15.959999999999999" fill="#000" opacity="0.45" filter="url(#soft)"/>
+    <path d="M 989.2 299 C 1006.3000000000001 297, 1013.9000000000001 215, 1027.2 215 C 1040.5 215, 1048.1000000000001 297, 1065.2 299 Z" fill="url(#cone)"/>
+    <ellipse cx="1023.2" cy="229" rx="7" ry="10" fill="#fff" opacity="0.85" filter="url(#tiny)"/>
+  <ellipse cx="1037.2" cy="396" rx="38" ry="15.959999999999999" fill="#000" opacity="0.45" filter="url(#soft)"/>
+    <path d="M 989.2 398 C 1006.3000000000001 396, 1013.9000000000001 314, 1027.2 314 C 1040.5 314, 1048.1000000000001 396, 1065.2 398 Z" fill="url(#cone)"/>
+    <ellipse cx="1023.2" cy="328" rx="7" ry="10" fill="#fff" opacity="0.85" filter="url(#tiny)"/>
+  <ellipse cx="1037.2" cy="495" rx="38" ry="15.959999999999999" fill="#000" opacity="0.45" filter="url(#soft)"/>
+    <path d="M 989.2 497 C 1006.3000000000001 495, 1013.9000000000001 413, 1027.2 413 C 1040.5 413, 1048.1000000000001 495, 1065.2 497 Z" fill="url(#cone)"/>
+    <ellipse cx="1023.2" cy="427" rx="7" ry="10" fill="#fff" opacity="0.85" filter="url(#tiny)"/>
+  <ellipse cx="1037.2" cy="594.0000000000001" rx="38" ry="15.959999999999999" fill="#000" opacity="0.45" filter="url(#soft)"/>
+    <path d="M 989.2 596.0000000000001 C 1006.3000000000001 594.0000000000001, 1013.9000000000001 512.0000000000001, 1027.2 512.0000000000001 C 1040.5 512.0000000000001, 1048.1000000000001 594.0000000000001, 1065.2 596.0000000000001 Z" fill="url(#cone)"/>
+    <ellipse cx="1023.2" cy="526.0000000000001" rx="7" ry="10" fill="#fff" opacity="0.85" filter="url(#tiny)"/>
+  <ellipse cx="1037.2" cy="693" rx="38" ry="15.959999999999999" fill="#000" opacity="0.45" filter="url(#soft)"/>
+    <path d="M 989.2 695 C 1006.3000000000001 693, 1013.9000000000001 611, 1027.2 611 C 1040.5 611, 1048.1000000000001 693, 1065.2 695 Z" fill="url(#cone)"/>
+    <ellipse cx="1023.2" cy="625" rx="7" ry="10" fill="#fff" opacity="0.85" filter="url(#tiny)"/>
+  <ellipse cx="1408.4" cy="297" rx="38" ry="15.959999999999999" fill="#000" opacity="0.45" filter="url(#soft)"/>
+    <path d="M 1360.4 299 C 1377.5 297, 1385.1000000000001 215, 1398.4 215 C 1411.7 215, 1419.3000000000002 297, 1436.4 299 Z" fill="url(#cone)"/>
+    <ellipse cx="1394.4" cy="229" rx="7" ry="10" fill="#fff" opacity="0.85" filter="url(#tiny)"/>
+  <ellipse cx="1408.4" cy="396" rx="38" ry="15.959999999999999" fill="#000" opacity="0.45" filter="url(#soft)"/>
+    <path d="M 1360.4 398 C 1377.5 396, 1385.1000000000001 314, 1398.4 314 C 1411.7 314, 1419.3000000000002 396, 1436.4 398 Z" fill="url(#cone)"/>
+    <ellipse cx="1394.4" cy="328" rx="7" ry="10" fill="#fff" opacity="0.85" filter="url(#tiny)"/>
+  <ellipse cx="1408.4" cy="495" rx="38" ry="15.959999999999999" fill="#000" opacity="0.45" filter="url(#soft)"/>
+    <path d="M 1360.4 497 C 1377.5 495, 1385.1000000000001 413, 1398.4 413 C 1411.7 413, 1419.3000000000002 495, 1436.4 497 Z" fill="url(#cone)"/>
+    <ellipse cx="1394.4" cy="427" rx="7" ry="10" fill="#fff" opacity="0.85" filter="url(#tiny)"/>
+  <ellipse cx="1408.4" cy="594.0000000000001" rx="38" ry="15.959999999999999" fill="#000" opacity="0.45" filter="url(#soft)"/>
+    <path d="M 1360.4 596.0000000000001 C 1377.5 594.0000000000001, 1385.1000000000001 512.0000000000001, 1398.4 512.0000000000001 C 1411.7 512.0000000000001, 1419.3000000000002 594.0000000000001, 1436.4 596.0000000000001 Z" fill="url(#cone)"/>
+    <ellipse cx="1394.4" cy="526.0000000000001" rx="7" ry="10" fill="#fff" opacity="0.85" filter="url(#tiny)"/>
+  <ellipse cx="1408.4" cy="693" rx="38" ry="15.959999999999999" fill="#000" opacity="0.45" filter="url(#soft)"/>
+    <path d="M 1360.4 695 C 1377.5 693, 1385.1000000000001 611, 1398.4 611 C 1411.7 611, 1419.3000000000002 693, 1436.4 695 Z" fill="url(#cone)"/>
+    <ellipse cx="1394.4" cy="625" rx="7" ry="10" fill="#fff" opacity="0.85" filter="url(#tiny)"/>
+  <ellipse cx="1130" cy="396" rx="38" ry="15.959999999999999" fill="#000" opacity="0.45" filter="url(#soft)"/>
+    <path d="M 1082 398 C 1099.1 396, 1106.7 314, 1120 314 C 1133.3 314, 1140.9 396, 1158 398 Z" fill="url(#cone)"/>
+    <ellipse cx="1116" cy="328" rx="7" ry="10" fill="#fff" opacity="0.85" filter="url(#tiny)"/>
+  <ellipse cx="1222.8" cy="495" rx="38" ry="15.959999999999999" fill="#000" opacity="0.45" filter="url(#soft)"/>
+    <path d="M 1174.8 497 C 1191.8999999999999 495, 1199.5 413, 1212.8 413 C 1226.1 413, 1233.7 495, 1250.8 497 Z" fill="url(#cone)"/>
+    <ellipse cx="1208.8" cy="427" rx="7" ry="10" fill="#fff" opacity="0.85" filter="url(#tiny)"/>
+  <ellipse cx="1315.6000000000001" cy="396" rx="38" ry="15.959999999999999" fill="#000" opacity="0.45" filter="url(#soft)"/>
+    <path d="M 1267.6000000000001 398 C 1284.7 396, 1292.3000000000002 314, 1305.6000000000001 314 C 1318.9 314, 1326.5000000000002 396, 1343.6000000000001 398 Z" fill="url(#cone)"/>
+    <ellipse cx="1301.6000000000001" cy="328" rx="7" ry="10" fill="#fff" opacity="0.85" filter="url(#tiny)"/>
+</svg>

@@ -1,0 +1,105 @@
+import { dad, nian, spot } from "./lines.ts";
+import type { Story } from "./types.ts";
+
+const crowd = spot(0.5, 0.75, 0.3, "人群");
+const poolSide = spot(0.55, 0.4, 0.08, "水池边的人");
+const pool = spot(0.67, 0.42, 0.15, "倒影池");
+const monument = spot(0.78, 0.16, 0.07, "华盛顿纪念碑");
+const trees = spot(0.18, 0.37, 0.15, "树上");
+const walkway = spot(0.35, 0.87, 0.08, "林肯纪念堂这一头");
+
+export const marchOnWashington: Story = {
+  id: "march-on-washington",
+  title: "我有一个梦想",
+  frameName: "向华盛顿进军",
+  year: 1963,
+  when: "1963 年 8 月 28 日，美国华盛顿",
+  field: "社会",
+  people: ["马丁·路德·金", "罗莎·帕克斯", "贝亚德·拉斯廷", "A. 菲利普·伦道夫"],
+  teaser: "二十多万人挤满了长长的水池两边，来听一个人讲他的梦想。",
+  frame: {
+    src: "frames/march-on-washington.jpg",
+    alt: "黑白照片：一个长长的水池从近处一直伸到远方，远处是尖尖的华盛顿纪念碑；水池两边、草地上、树下，密密麻麻全是人",
+    kind: "照片",
+    by: "美国国家档案馆藏（美国政府作品）",
+    license: "公有领域",
+    commons: "File:Civil Rights March on Washington, D.C. (A wide-angle view of marchers along the mall, showing the Reflecting Pool and... - NARA - 542045.tif",
+    page: "https://commons.wikimedia.org/wiki/File:Civil_Rights_March_on_Washington,_D.C._(A_wide-angle_view_of_marchers_along_the_mall,_showing_the_Reflecting_Pool_and..._-_NARA_-_542045.tif",
+  },
+  lines: [
+    nian("爸爸，这张图上有什么？好多好多人！", { part: "这是什么图", look: crowd }),
+    dad("1963 年 8 月 28 日，美国首都华盛顿，大约二十五万人从全国各地赶来，挤在这里。"),
+    nian("二十五万人！他们在干什么？"),
+    dad("在参加一场大游行，名字叫“为工作和自由向华盛顿进军”。"),
+    nian("中间长长的是什么？", { look: pool }),
+    dad("是一个长长的水池，叫倒影池。连水池边上都站满了人。", { look: poolSide }),
+    nian("远处尖尖的白塔呢？", { look: monument }),
+    dad("那是华盛顿纪念碑，纪念美国第一位总统华盛顿。"),
+    nian("那些人在看什么？"),
+    dad("照片是从林肯纪念堂这一头往远处拍的。大家都朝着这边，在听台阶上的人讲话。"),
+
+    nian("他们为什么要来？", { part: "不公平的牌子" }),
+    dad("那时候在美国很多地方，黑皮肤的人被不公平地对待。饮水池、饭馆、厕所、公共汽车上，都挂着“只限白人”的牌子。"),
+    nian("为什么？大家都是人呀。"),
+    dad("你说得对，这本来就不应该。可是当时有些地方的法律就是这么规定的，黑人孩子和白人孩子还要分开上学。"),
+    nian("那有人反对吗？"),
+    dad("有。1963 年，离林肯总统宣布解放奴隶，正好过去了一百年。大家说：一百年了，黑人还没有得到真正的平等。"),
+
+    nian("他们怎么反对？打架吗？", { part: "宁可走路" }),
+    dad("不打架。1955 年，一位叫罗莎·帕克斯的女士，在公共汽车上不肯把座位让给白人，被警察带走了。"),
+    nian("就因为不让座？"),
+    dad("对。于是城里的黑人约好：不坐公共汽车了。他们走路、拼车，坚持了一年多，有大约三百辆私家车一起帮忙。"),
+    nian("走路走一年多！"),
+    dad("带头的是一位年轻的牧师，叫马丁·路德·金。他说，有尊严地走路，比受委屈地坐车更光荣。"),
+    nian("后来呢？"),
+    dad("最后法院判定，公共汽车上分开坐是违法的。金博士说，他学的是印度的甘地：不用拳头，用和平的办法，也能让事情改变。"),
+    nian("帕克斯是第一个不让座的人吗？"),
+    dad("不是。在她之前，还有一个 15 岁的女孩克劳德特·科尔文，也因为不让座被带走过。很多普通人的勇气，一点点汇在了一起。"),
+
+    nian("金博士也在这张照片里吗？", { part: "我有一个梦想", look: walkway }),
+    dad("在镜头这一头的林肯纪念堂台阶上，照片里看不到他。那天讲话的人很多，他排在快要结束的时候。"),
+    nian("他讲了什么？"),
+    dad("他前一天晚上写稿子，一直写到凌晨三点半。可讲着讲着，他把稿子放到一边，说出了一段稿子上没有的话。"),
+    nian("什么话？"),
+    dad("“我有一个梦想。”他说，他梦想有一天，他的四个孩子生活在一个不看皮肤颜色、只看品格好坏的国家里。"),
+    nian("他是从自己的孩子说起的！"),
+    dad("对。很多人说，是一位叫马哈莉亚·杰克逊的歌唱家在旁边喊：“马丁，跟他们讲讲你的梦想！”不过金博士自己回忆时没提这件事，所以只能算一个说法。"),
+    nian("那这句话是他当场想出来的吗？"),
+    dad("也不全是。两个月前，他在底特律就讲过“我有一个梦想”。那天在华盛顿，他又讲了一遍，讲得最动人。"),
+    nian("树上怎么也有人？", { look: trees }),
+    dad("人太多了，有人爬到树上，就为了离得近一点、听得清一点。"),
+
+    nian("后来梦想实现了吗？", { part: "梦想没有停下", look: "all" }),
+    dad("第二年，美国通过了一部新法律，公共场所和学校不许再把人分开。又过了一年，又一部法律保障黑人也能好好投票。"),
+    nian("是他一个人讲出来的吗？"),
+    dad("不是一篇讲话变出来的。是很多很多人，一起走路、一起游行、一起说话，才换来的改变。"),
+    nian("金博士后来呢？"),
+    dad("1964 年，他得了诺贝尔和平奖，那年 35 岁，奖金全都捐了出去。1968 年，他在孟菲斯被人杀害了，那年 39 岁。可他的梦想没有停下来。"),
+    nian("我也想去看看他站过的台阶。"),
+    dad("林肯纪念堂的台阶上，刻着一行字，标出了他讲“我有一个梦想”的地方。美国还把每年一月的第三个星期一，定成了纪念他的节日。"),
+  ],
+  remember: "1963 年，二十多万人来到华盛顿，听马丁·路德·金讲他的梦想：人不该因为皮肤的颜色被区别对待。",
+  facts: [
+    ["这张图", "“为工作和自由向华盛顿进军”的人群，倒影池和华盛顿纪念碑"],
+    ["时间", "1963 年 8 月 28 日"],
+    ["人数", "约 25 万人（估计）"],
+    ["最有名的讲话", "马丁·路德·金《我有一个梦想》"],
+    ["后来", "1964 年《民权法》，1965 年《投票权法》"],
+  ],
+  sources: [
+    { title: "Wikimedia Commons：Civil Rights March on Washington, D.C.（NARA 542045）", url: "https://commons.wikimedia.org/wiki/File:Civil_Rights_March_on_Washington,_D.C._(A_wide-angle_view_of_marchers_along_the_mall,_showing_the_Reflecting_Pool_and..._-_NARA_-_542045.tif" },
+    { title: "National Archives：Official Program for the March on Washington", url: "https://www.archives.gov/milestone-documents/official-program-for-the-march-on-washington" },
+    { title: "Stanford King Institute：March on Washington for Jobs and Freedom", url: "https://kinginstitute.stanford.edu/march-washington-jobs-and-freedom" },
+    { title: "Stanford King Institute：I Have a Dream", url: "https://kinginstitute.stanford.edu/i-have-dream" },
+    { title: "Stanford King Institute：Montgomery Bus Boycott", url: "https://kinginstitute.stanford.edu/montgomery-bus-boycott" },
+    { title: "Library of Congress：\"I Have a Dream\"（National Recording Registry essay）", url: "https://www.loc.gov/static/programs/national-recording-preservation-board/documents/IHaveADream.pdf" },
+    { title: "Britannica：I Have a Dream", url: "https://www.britannica.com/topic/I-Have-a-Dream" },
+    { title: "NPR：'I Have A Dream' Speech, In Its Entirety", url: "https://www.npr.org/2010/01/18/122701268/i-have-a-dream-speech-in-its-entirety" },
+    { title: "Library of Congress：The Civil Rights Act of 1964 — Segregation Era", url: "https://www.loc.gov/exhibits/civil-rights-act/segregation-era.html" },
+    { title: "National Archives：Civil Rights Act (1964)", url: "https://www.archives.gov/milestone-documents/civil-rights-act" },
+    { title: "National Archives：Voting Rights Act (1965)", url: "https://www.archives.gov/milestone-documents/voting-rights-act" },
+    { title: "Nobel Prize：Martin Luther King Jr. Biographical", url: "https://www.nobelprize.org/prizes/peace/1964/king/biographical/" },
+    { title: "Britannica：Martin Luther King, Jr., Day", url: "https://www.britannica.com/topic/Martin-Luther-King-Jr-Day" },
+    { title: "National Park Service：Lincoln Memorial \"I Have a Dream\" Marker", url: "https://www.nps.gov/places/000/lincoln-memorial-i-have-a-dream-marker.htm" },
+  ],
+};

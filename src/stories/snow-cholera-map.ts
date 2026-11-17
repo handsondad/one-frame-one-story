@@ -1,0 +1,115 @@
+import { dad, nian, spot } from "./lines.ts";
+import type { Story } from "./types.ts";
+
+// 圈的位置按裁好的图算（见 frame.crop）
+const pump = spot(0.485, 0.442, 0.035, "水泵", 3.5);
+const bars = spot(0.475, 0.49, 0.05, "小黑条", 3);
+const pumpAndBars = spot(0.48, 0.465, 0.09, "水泵");
+const workhouse = spot(0.36, 0.26, 0.09, "济贫院");
+const brewery = spot(0.625, 0.43, 0.05, "啤酒厂", 3);
+const otherPumps = [spot(0.109, 0.324, 0.03), spot(0.283, 0.9, 0.03), spot(0.571, 0.853, 0.03), spot(0.889, 0.718, 0.03)];
+
+export const snowCholeraMap: Story = {
+  id: "snow-cholera-map",
+  title: "地图上的小黑条",
+  frameName: "斯诺的霍乱地图",
+  year: 1854,
+  when: "1854 年秋天，伦敦苏豪区",
+  field: "医学",
+  people: ["约翰·斯诺", "亨利·怀特黑德"],
+  teaser: "一位医生挨家挨户敲门，把答案画在了一张地图上。",
+  frame: {
+    src: "frames/snow-cholera-map.jpg",
+    crop: { x: 0.28, y: 0.2, w: 0.58, h: 0.58 },
+    alt: "一张黑白的老街区地图，街道之间的房子边上画着一排排短短的黑线，中间一处标着 PUMP 的地方旁边黑线叠得最高",
+    kind: "地图",
+    by: "约翰·斯诺，印在他 1855 年的书里",
+    license: "公有领域",
+    commons: "File:Snow-cholera-map-1.jpg",
+    page: "https://commons.wikimedia.org/wiki/File:Snow-cholera-map-1.jpg",
+    note: "原图是一整片街区，这里只截了布罗德街水泵周围的一块。",
+  },
+  lines: [
+    nian("爸爸，这是一张地图吗？上面有好多小黑条。", { part: "这是什么图" }),
+    dad("对，这是英国伦敦的一小片街区，叫苏豪区。画它的是一位医生，叫约翰·斯诺，说的是 1854 年的事。"),
+    nian("这些小黑条是什么？", { look: bars }),
+    dad("每一个小黑条，代表这户人家有一个人得了一种病，没能治好。一家有几个人去世，就叠几条。"),
+    nian("这么多……他们得的是什么病？", { look: "all" }),
+    dad("一种叫霍乱的病，会让人又吐又拉，身体里的水一下子丢得太多。那时候还没有好办法治。"),
+    nian("好难过。"),
+    dad("是啊。那年夏天快结束的时候，就在这一小片街区，十天里有五百多人去世。斯诺医生想弄明白：这病到底是从哪儿来的？"),
+    nian("现在还有霍乱吗？"),
+    dad("有些地方还有，不过现在大家知道怎么预防，也知道怎么治了。弄明白它是怎么传开的，就是从这个故事开始的。"),
+
+    nian("那时候的人觉得病是从哪儿来的？", { part: "坏空气还是脏水" }),
+    dad("大多数人觉得是“坏空气”。那时候伦敦到处是垃圾和污水，很臭，大家以为臭气里有毒，闻多了就会生病。"),
+    nian("斯诺医生也这么想吗？"),
+    dad("不。他几年前就写过文章，说霍乱是从脏水里来的：喝了不干净的水，病就跟着进了肚子。"),
+    nian("可是水看起来干净呀？"),
+    dad("让人生病的东西太小了，眼睛看不见。就像没洗的手，看起来干干净净，上面也可能有很多细菌。"),
+    nian("那时候家里有自来水吗？"),
+    dad("很多人家没有。街上有一个个水泵，大家拎着桶去压水，打回家喝、做饭。地图上写着“PUMP”的地方就是水泵。", { look: pump }),
+
+    nian("斯诺医生怎么找原因？", { part: "挨家挨户敲门", look: "all" }),
+    dad("他像个侦探。先去政府的办公室，抄下去世的人住在哪儿，然后一家一家去敲门。"),
+    nian("敲门问什么？"),
+    dad("问：“你们家的水，是从哪个水泵打的？”"),
+    nian("问出来了吗？"),
+    dad("问出来了。离这个水泵越近，去世的人越多，他们大多喝的都是布罗德街这个水泵的水。", { look: pumpAndBars }),
+    nian("就是黑条最多的这里！"),
+    dad("对。你看，最高的那一摞小黑条，就紧挨着水泵。", { look: bars }),
+    nian("别的水泵旁边呢？"),
+    dad("别的水泵旁边，黑条就少多了。", { look: otherPumps }),
+
+    nian("这里有个大方块，怎么几乎没有黑条？", { part: "没有黑条的地方", look: workhouse }),
+    dad("好眼力！那是一所济贫院，住着五百多个穷人，离水泵也不远，可只有五个人去世。"),
+    nian("为什么？"),
+    dad("斯诺去问了：济贫院院子里有自己的井，从来不去布罗德街打水。"),
+    nian("这一块也没有黑条。", { look: brewery }),
+    dad("那是一家啤酒厂，就在水泵旁边。厂里七十多个工人，没有一个得重病。"),
+    nian("他们不喝那个水泵的水吗？"),
+    dad("对。厂里有自己的深井，工人们每天还能分到啤酒喝，根本不去街上的水泵打水。"),
+    nian("没有黑条的地方，也是线索！", { look: "all" }),
+    dad("说得好。不喝那个水泵的水，就不生病——这正好说明，问题出在水里。"),
+
+    nian("那他怎么办？", { part: "拆掉手柄" }),
+    dad("9 月 7 日晚上，他去找管这片街区的委员会，请他们把水泵关掉。第二天，水泵的手柄就被拆掉了，谁也压不出水来。", { look: pump }),
+    nian("病就没有了吗？"),
+    dad("很多书上这么说，其实不完全对。斯诺自己的记录显示，那时候生病的人已经在变少了，很多人也搬走了。"),
+    nian("那拆手柄还有用吗？"),
+    dad("有用。如果井水还是脏的，拆掉手柄，就能防止再有一大批人生病。"),
+    nian("那这张地图是什么时候画的？", { look: "all" }),
+    dad("是后来画的。斯诺先找到了答案，再把它画成地图，让别人一眼就能看懂。1854 年 12 月，他第一次拿出这张图。"),
+    nian("那口井的水为什么会脏呢？"),
+    dad("第二年，一位叫怀特黑德的牧师帮着调查。他一开始不相信斯诺，可越查越觉得斯诺是对的。"),
+    dad("他们发现，井旁边有一个装脏水的坑，坑壁的砖坏了，脏水一点一点渗进了井里。"),
+    nian("这下大家都相信斯诺了吧？"),
+    dad("当时还没有。手柄后来又装了回去，很多官员还是觉得是坏空气。斯诺 1858 年就去世了，没等到大家都认同他。"),
+
+    nian("后来呢？", { part: "干净的水" }),
+    dad("1858 年夏天，伦敦的泰晤士河臭得厉害，大家叫它“大恶臭”。议会很快决定修新的下水道。"),
+    dad("一位叫巴泽尔杰特的工程师，带人修了一千多英里的下水道，把脏水引走。很多到今天还在用。"),
+    nian("霍乱少了吗？"),
+    dad("少了很多。再后来，科学家确认了霍乱是一种很小很小的细菌引起的，斯诺说对了。"),
+    nian("那个水泵还在吗？"),
+    dad("原来的位置上，地上嵌着一块粉红色的石头做记号。旁边立着一个仿造的水泵，故意没有手柄，提醒大家干净的水有多重要。"),
+    nian("所以我们要喝干净的水，还要洗手！"),
+    dad("对。这些今天看来很平常的事，就是从这样一张地图开始，大家慢慢学会的。"),
+  ],
+  remember: "一位医生挨家挨户敲门，把答案画在地图上：病是从脏水里来的。",
+  facts: [
+    ["这张图", "斯诺的霍乱地图，印在他 1855 年的书里"],
+    ["时间", "1854 年 8 月底到 9 月"],
+    ["地点", "伦敦苏豪区，布罗德街的水泵附近"],
+    ["小黑条", "一条代表一户人家里去世的一个人"],
+    ["水泵手柄", "1854 年 9 月 8 日拆掉"],
+  ],
+  sources: [
+    { title: "Wikimedia Commons：Snow-cholera-map-1", url: "https://commons.wikimedia.org/wiki/File:Snow-cholera-map-1.jpg" },
+    { title: "John Snow：On the Mode of Communication of Cholera, 2nd ed. 1855（MSU John Snow Archive）", url: "https://johnsnow.matrix.msu.edu/documentUploads/15-78-2BB/15-78-2BB-22-Doc26-II-MCC2.pdf" },
+    { title: "Brody et al., The Lancet 2000：Map-making and myth-making in Broad Street", url: "https://doi.org/10.1016/S0140-6736(00)02442-9" },
+    { title: "Britannica：John Snow", url: "https://www.britannica.com/biography/John-Snow-British-physician" },
+    { title: "London Museum：The Great Stink of 1858", url: "https://www.londonmuseum.org.uk/collections/london-stories/great-stink-of-1858/" },
+    { title: "John Snow Society：The return of the pump (2018)", url: "https://johnsnowsociety.org/2018/07/20/the-return-of-the-pump/" },
+  ],
+};
