@@ -19,6 +19,7 @@ export type Group = {
 };
 
 export const FIELD_LOOK: Record<Field, { readonly icon: string; readonly color: string; readonly note: string }> = {
+  数学: { icon: "📐", color: "#3867d6", note: "数、形状和规律：藏在万物背后的语言。" },
   天文: { icon: "🔭", color: "#5b8def", note: "抬头看天：月亮、星星、星系和黑洞。" },
   物理: { icon: "⚛️", color: "#ff9f43", note: "光、力、能量和看不见的射线。" },
   化学: { icon: "⚗️", color: "#a66cd8", note: "东西是由什么做成的，又怎么变成别的东西。" },

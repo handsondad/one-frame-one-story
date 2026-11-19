@@ -31,7 +31,7 @@
 1. 找图：优先 Wikimedia Commons 上公有领域或 CC 许可的图，记下文件名（`File:...`）、作者、许可。有名的图如果只有带版权的版本（比如照片 51 号、沃森和克里克与模型的合影），本站是非商业的学习网站，可以放原图：`license` 写明版权归谁、只作非商业学习用途，`note` 里说明，再登记到 `THIRD_PARTY_NOTICES.md` 的「有版权的照片」。也可以自己画示意图，`kind: "示意图"` 并在 `note` 里说明。
  - 一张图讲不清时可以中途换图：台词里写 `show: 另一张图`（要有 `title`），从这句起显示那张，之后的 `look` 按那张图算，直到再写 `show` 换回来。例子见 `dna-model.ts`（老照片 + 博物馆复制品）、`photo-51.ts`（原照片 + 示意图）。
 2. 新建 `src/stories/<id>.ts`，加进 `src/stories/index.ts`。`frame.src` 写 `frames/<id>.jpg`，`frame.commons` 写 Commons 文件名。原图太大、只讲其中一块（比如老地图）时写 `frame.crop`，下载时裁好，`note` 里说明。
-   - `field` 不限理科：还有医学、地理、历史、艺术，新学科在 `src/stories/types.ts` 和 `src/pages/line.ts` 的 `FIELD_LOOK` 里加。
+   - `field` 不限理化生：还有数学、医学、地理、历史、艺术、社会，新学科在 `src/stories/types.ts` 和 `src/pages/line.ts` 的 `FIELD_LOOK` 里加。
    - `year` 是图产生的年份：公元前写负数（罗塞塔石碑是 `-196`），说不准哪一年的古画加 `circa: true`，显示用 `src/lib/year.ts` 的 `yearText`。
 3. `npm run frames -- <id>` 下载图片和缩略图。不在 Commons 上的图（用户发来的截图）不写 `commons`，自己用 ffmpeg 转成 JPEG 放到 `public/frames/<id>.jpg`，再跑这一步补缩略图。
 4. `npm run grid -- <id>` 给图画上网格，看清楚再写 `spot(x, y, r)`：x、y 是占图宽、高的比例，r 按图宽算。圈太小看不清就给第 5 个参数 `zoom`。
