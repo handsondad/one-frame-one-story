@@ -23,14 +23,15 @@
 - `public/voice/<故事>/<指纹>.mp3`：配音，`tools/voice.mjs` 生成
 - `public/frames/`：图片（≤1400px JPEG），`public/frames/thumbs/`：晾衣杆缩略图
 - `tools/fetch-frames.mjs`：从 Commons 下载图片、生成缩略图；`tools/draw-photo51.mjs`、`draw-atom-trap.mjs`、`draw-nano.mjs`：画没有开放许可的图的示意图（照片 51 号的斑点、单个原子、IBM 原子字和并五苯）
+- `tools/new-story.mjs`（`npm run story:new -- <id>`）：生成新故事骨架并自动注册到 `src/stories/index.ts`；`tools/check.mjs`（`npm run check [-- <id> | --stats]`）：检查故事规则、图片、长度与学科分布
 - `tools/snapshot.mjs`：无头浏览器截图；`tools/grid.mjs`：给图画网格读 `spot` 坐标；`tools/sheet.mjs`：把几张截图里的图拼成总览，核对圈
-- `.cursor/skills/add-story/`：加故事、换图的一步步做法（清单、查资料的提示词模板），下面是要点
+- `skills/add-story/`（镜像于 `.agents/skills/add-story/` 与 `.cursor/skills/add-story/`）：加故事、换图的一步步做法（清单、查资料的提示词模板），下面是要点
 
 ## 加一个故事
 
 1. 找图：优先 Wikimedia Commons 上公有领域或 CC 许可的图，记下文件名（`File:...`）、作者、许可。有名的图如果只有带版权的版本（比如照片 51 号、沃森和克里克与模型的合影），本站是非商业的学习网站，可以放原图：`license` 写明版权归谁、只作非商业学习用途，`note` 里说明，再登记到 `THIRD_PARTY_NOTICES.md` 的「有版权的照片」。也可以自己画示意图，`kind: "示意图"` 并在 `note` 里说明。
  - 一张图讲不清时可以中途换图：台词里写 `show: 另一张图`（要有 `title`），从这句起显示那张，之后的 `look` 按那张图算，直到再写 `show` 换回来。例子见 `dna-model.ts`（老照片 + 博物馆复制品）、`photo-51.ts`（原照片 + 示意图）。
-2. 新建 `src/stories/<id>.ts`，加进 `src/stories/index.ts`。`frame.src` 写 `frames/<id>.jpg`，`frame.commons` 写 Commons 文件名。原图太大、只讲其中一块（比如老地图）时写 `frame.crop`，下载时裁好，`note` 里说明。
+2. 运行 `npm run story:new -- <id>` 生成 `src/stories/<id>.ts` 并自动注册到 `src/stories/index.ts`。`frame.src` 写 `frames/<id>.jpg`，`frame.commons` 写 Commons 文件名。原图太大、只讲其中一块（比如老地图）时写 `frame.crop`，下载时裁好，`note` 里说明。
    - `field` 不限理化生：还有数学、医学、地理、历史、艺术、社会，新学科在 `src/stories/types.ts` 和 `src/pages/line.ts` 的 `FIELD_LOOK` 里加。
    - `year` 是图产生的年份：公元前写负数（罗塞塔石碑是 `-196`），说不准哪一年的古画加 `circa: true`，显示用 `src/lib/year.ts` 的 `yearText`。
 3. `npm run frames -- <id>` 下载图片和缩略图。不在 Commons 上的图（用户发来的截图）不写 `commons`，自己用 ffmpeg 转成 JPEG 放到 `public/frames/<id>.jpg`，再跑这一步补缩略图。
@@ -39,7 +40,7 @@
 6. `npm run snapshot -- <id> --spots` 截每一句指了圈的，`npm run sheet -- <id>` 拼成总览，看圈有没有圈对；`--width 390` 看手机。
 7. 台词定了先跑 `npm run font`（新故事里有新汉字，字体要重新截，测试会检查），再跑 `npm run voice -- <id>` 配音（要联网，需要 `python -m pip install edge-tts` 和 ffmpeg）。改过台词也要跑，测试会检查每句都有配音。
 8. 图的署名登记到 `THIRD_PARTY_NOTICES.md`，`README.md` 第一段的图片清单按年份插进去。
-9. `npm run typecheck && npm test && npm run build`。
+9. `npm run typecheck && npm run check && npm test && npm run build`。
 
 ## 写台词的规矩
 

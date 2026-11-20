@@ -56,7 +56,7 @@ description: 给「一图一故事」加一个新故事，或者给已有故事�
 
 ## 3. 写数据
 
-照着最像的已有故事写（结构见 `src/stories/types.ts`）。要点都在 `AGENTS.md`「写台词的规矩」：小念先问“这张图上有什么”，每句不超过 160 字，用 `part` 分段，至少 16 句、至少指两处。`year` 决定在晾衣杆上的位置，新学科要在 `types.ts` 和 `src/pages/line.ts` 的 `FIELD_LOOK` 里加。
+先跑 `npm run story:new -- <id>` 生成 `src/stories/<id>.ts` 并自动注册到 `src/stories/index.ts`，再照着最像的已有故事填实（结构见 `src/stories/types.ts`）。要点都在 `AGENTS.md`「写台词的规矩」：小念先问“这张图上有什么”，每句不超过 160 字，用 `part` 分段，至少 16 句、至少指两处。`year` 决定在晾衣杆上的位置，新学科要在 `types.ts` 和 `src/pages/line.ts` 的 `FIELD_LOOK` 里加。
 
 ## 4. 圈
 
@@ -91,4 +91,4 @@ npm run sheet -- <id>               # 拼成 snapshots/<id>-sheet.png
 
 ## 8. 收尾
 
-`npm run typecheck && npm test && npm run build` 全过后 `git add -A`。用户没让提交就不要 commit / push。给用户汇报时附上两三张截图（圈对了的、换图的那句），说清哪些说法没能核实。
+`npm run typecheck && npm run check && npm test && npm run build` 全过后 `git add -A`。用户没让提交就不要 commit / push。给用户汇报时附上两三张截图（圈对了的、换图的那句），说清哪些说法没能核实。
