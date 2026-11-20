@@ -94,4 +94,4 @@ if (!index.includes(`./${id}.ts`)) {
 }
 
 console.log(`已创建 src/stories/${id}.ts 并注册到 src/stories/index.ts`);
-console.log(`下一步：填写史实与台词 -> npm run frames -- ${id} -> npm run grid -- ${id} -> npm run check -- ${id}`);
+console.log(`下一步：填写史实与台词 -> npm run frames -- ${id} -> npm run grid -- ${id} -> npm run story:index -> npm run check -- ${id}`);

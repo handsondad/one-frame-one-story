@@ -1,5 +1,6 @@
 import { useId, useState } from "react";
 import { viewFor } from "../lib/view.ts";
+import { ASPECTS } from "../stories/catalog.ts";
 import type { Frame, Spot } from "../stories/types.ts";
 
 /** viewBox 的宽度；高度按图片比例算 */
@@ -13,10 +14,12 @@ function labelY(s: Spot, h: number, k: number) {
 
 /** 一张图：把要看的地方圈出来，四周压暗，镜头慢慢推过去 */
 export function FrameStage({ frame, spots }: { frame: Frame; spots: readonly Spot[] }) {
-  const [aspect, setAspect] = useState<number | null>(null);
+  // 比例先按预先量好的放，图还没下完框子就是对的形状；图下完再推镜头、画圈
+  const [aspect, setAspect] = useState<number | null>(ASPECTS[frame.src] ?? null);
+  const [loaded, setLoaded] = useState(false);
   const maskId = useId();
   const a = aspect ?? 1;
-  const view = aspect ? viewFor(spots, a) : { scale: 1, x: 0, y: 0 };
+  const view = loaded ? viewFor(spots, a) : { scale: 1, x: 0, y: 0 };
   const h = VB * a;
   const k = 1 / view.scale;
   const spotsKey = spots.map((s) => `${s.x},${s.y},${s.r}`).join(";");
@@ -26,8 +29,11 @@ export function FrameStage({ frame, spots }: { frame: Frame; spots: readonly Spo
       style={{ aspectRatio: `1 / ${a}`, ["--aspect" as string]: a }}>
       <div className="zoomer" style={{ transform: `translate(${view.x * 100}%, ${view.y * 100}%) scale(${view.scale})` }}>
         <img src={frame.src} alt={frame.alt} draggable={false}
-          onLoad={(e) => setAspect(e.currentTarget.naturalHeight / e.currentTarget.naturalWidth)} />
-        {aspect && spots.length > 0 && (
+          onLoad={(e) => {
+            setAspect(e.currentTarget.naturalHeight / e.currentTarget.naturalWidth);
+            setLoaded(true);
+          }} />
+        {loaded && spots.length > 0 && (
           <svg className="spots" key={spotsKey} viewBox={`0 0 ${VB} ${h}`} preserveAspectRatio="none" aria-hidden="true">
             <defs>
               <mask id={maskId}>

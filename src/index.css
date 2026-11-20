@@ -2,7 +2,7 @@
    暖色底、深色描边、圆角和按下去的按钮。主角是真实的图，所以不画卡通角色 */
 @font-face {
   font-family: "StoryFont";
-  src: url("/fonts/story.woff") format("woff");
+  src: url("/fonts/story.woff2") format("woff2");
   font-display: block;
 }
 
@@ -319,6 +319,10 @@ a { color: var(--accent-blue-deep); }
 .link-btn { border: 0; background: none; color: var(--text-secondary); font: inherit; font-size: 16px; cursor: pointer; padding: 0 6px; }
 .link-btn:hover { color: var(--ink); text-decoration: underline; }
 .link-btn:disabled { opacity: 0.35; cursor: default; text-decoration: none; }
+
+/* 故事一般早就预先下好了，等一小会儿再露出这行字，免得一闪 */
+.story-wait { margin: 18vh auto 0; text-align: center; font-size: 20px; color: var(--text-secondary); animation: wait-in 300ms ease-out 400ms both; }
+@keyframes wait-in { from { opacity: 0; } to { opacity: 1; } }
 
 .ending { margin-top: 18px; display: grid; gap: 16px; animation: preview-in 400ms ease-out; }
 .remember {

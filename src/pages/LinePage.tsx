@@ -1,8 +1,8 @@
 import { useEffect, useMemo, useRef, useState, type CSSProperties, type KeyboardEvent } from "react";
-import { framesOf, thumbOf } from "../lib/view.ts";
+import { thumbOf } from "../lib/view.ts";
 import { yearText } from "../lib/year.ts";
-import { STORIES } from "../stories/index.ts";
-import type { Story } from "../stories/types.ts";
+import { CARDS as STORIES, type Credit, type StoryCard as Story } from "../stories/catalog.ts";
+import { prefetchStory } from "./story-loader.ts";
 import { groupsOf, layout, NARROW, slotKey, slotsOf, WIDE, type Group, type Mode } from "./line.ts";
 import { useDragScroll } from "./useDragScroll.ts";
 
@@ -219,6 +219,8 @@ function GroupPreview({ group, isOpen, onToggle }: { group: Group; isOpen: boole
 }
 
 function Preview({ story }: { story: Story }) {
+  // 点一下看简介，再点一下才开讲：趁看简介这会儿把故事先下好
+  useEffect(() => prefetchStory(story.id), [story.id]);
   return (
     <article className="preview" key={story.id} aria-live="polite">
       <a className="preview-frame" href={`#/story/${story.id}`} aria-label={`看图听故事：${story.title}`}>
@@ -241,18 +243,30 @@ function Preview({ story }: { story: Story }) {
 }
 
 function Credits() {
+  // 署名清单一般没人点开，点开时才加载
+  const [credits, setCredits] = useState<readonly Credit[] | null>(null);
+  const [failed, setFailed] = useState(false);
+  const load = () => {
+    if (credits) return;
+    setFailed(false);
+    import("../stories/credits.json").then((m) => setCredits(m.default as readonly Credit[]), () => setFailed(true));
+  };
   return (
-    <details className="credits">
+    <details className="credits" onToggle={(e) => { if (e.currentTarget.open) load(); }}>
       <summary>图片从哪里来</summary>
       <p>故事里的对话是根据史料改写的；图片大多来自 Wikimedia Commons，许可写在每一项后面。</p>
-      <ul>
-        {STORIES.flatMap((s) => framesOf(s).map((f) => (
-          <li key={f.src}>
-            <strong>{f === s.frame ? s.frameName : f.title}</strong>（{yearText(s)}）：{f.by}。{f.license}。
-            <a href={f.page} target="_blank" rel="noreferrer">出处</a>
-          </li>
-        )))}
-      </ul>
+      {credits ? (
+        <ul>
+          {credits.map((f) => (
+            <li key={f.src}>
+              <strong>{f.name}</strong>（{yearText(f)}）：{f.by}。{f.license}。
+              <a href={f.page} target="_blank" rel="noreferrer">出处</a>
+            </li>
+          ))}
+        </ul>
+      ) : failed
+        ? <p>清单没有加载出来，<button type="button" className="link-btn" onClick={load}>再试一次</button></p>
+        : <p>正在翻清单……</p>}
     </details>
   );
 }

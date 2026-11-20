@@ -1,4 +1,4 @@
-// 和 storyverse 用同一套字：站酷快乐体。从完整字库里只截出网站用到的字，生成 public/fonts/story.woff。
+// 和 storyverse 用同一套字：站酷快乐体。从完整字库里只截出网站用到的字，生成 public/fonts/story.woff2。
 // 完整字库 1.5 MB，截完一般一两百 KB。故事或页面加了新字，就重跑一次：npm run font
 //
 // 需要 Python 和 fontTools：python -m pip install fonttools
@@ -55,13 +55,14 @@ async function main() {
   copyFileSync(ofl, join(outDir, "OFL.txt"));
   const chars = collect();
   writeFileSync(CHARS_FILE, chars);
+  const out = join(outDir, "story.woff2");
   execFileSync("python", [
     "-m", "fontTools.subset", source,
-    `--text-file=${CHARS_FILE}`, "--flavor=woff", `--output-file=${join(outDir, "story.woff")}`,
+    `--text-file=${CHARS_FILE}`, "--flavor=woff2", `--output-file=${out}`,
     "--layout-features=*",
   ], { stdio: "inherit" });
-  const size = statSync(join(outDir, "story.woff")).size;
-  console.log(`${[...chars].length} 个字 → public/fonts/story.woff（${(size / 1024).toFixed(0)} KB）`);
+  const size = statSync(out).size;
+  console.log(`${[...chars].length} 个字 → public/fonts/story.woff2（${(size / 1024).toFixed(0)} KB）`);
 }
 
 const entry = process.argv[1] && pathToFileURL(resolve(process.argv[1])).href;

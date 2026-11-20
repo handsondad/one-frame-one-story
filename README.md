@@ -22,6 +22,7 @@ npm run dev
 | `npm test` | 检查故事数据和取景逻辑 |
 | `npm run build` | 生产构建，输出到 `dist/`（相对路径，放到任意子路径都能打开） |
 | `npm run frames` | 从 Wikimedia Commons 下载图片并生成缩略图（需要 ffmpeg） |
+| `npm run story:index` | 重新生成首页用的故事目录、图片署名和图片比例（`src/stories/*.json`），故事或图片改了就跑 |
 | `npm run font` | 从站酷快乐体里截出网站用到的字（需要 `python -m pip install fonttools`） |
 | `npm run voice [-- <故事id>]` | 用 edge-tts 给台词配音，只配新的和改过的句子（需要联网、`python -m pip install edge-tts` 和 ffmpeg） |
 | `npm run snapshot -- <故事id> [第几句... \| --spots]` | 截图到 `snapshots/` 自查，`--spots` 截每一句指了圈的，`--width 390` 看手机 |

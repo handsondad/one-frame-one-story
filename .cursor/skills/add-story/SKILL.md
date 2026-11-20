@@ -17,7 +17,7 @@ description: 给「一图一故事」加一个新故事，或者给已有故事�
 - [ ] 5. 截图 + 总览，核对每个圈，改到圈对为止
 - [ ] 6. npm run font，npm run voice -- <id>
 - [ ] 7. THIRD_PARTY_NOTICES.md、README.md 的图片清单
-- [ ] 8. npm run typecheck && npm test && npm run build，git add -A
+- [ ] 8. npm run story:index，npm run typecheck && npm run check && npm test && npm run build，git add -A
 ```
 
 ## 1. 查资料
@@ -91,4 +91,4 @@ npm run sheet -- <id>               # 拼成 snapshots/<id>-sheet.png
 
 ## 8. 收尾
 
-`npm run typecheck && npm run check && npm test && npm run build` 全过后 `git add -A`。用户没让提交就不要 commit / push。给用户汇报时附上两三张截图（圈对了的、换图的那句），说清哪些说法没能核实。
+先跑 `npm run story:index` 重新生成网页读的目录（`src/stories/*.json`：首页卡片、署名、图片比例；改了标题、简介、图片或署名都要重跑），再 `npm run typecheck && npm run check && npm test && npm run build`，全过后 `git add -A`。用户没让提交就不要 commit / push。给用户汇报时附上两三张截图（圈对了的、换图的那句），说清哪些说法没能核实。

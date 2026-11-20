@@ -1,11 +1,12 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { FrameStage } from "../components/FrameStage.tsx";
-import { canSpeak, speak } from "../lib/speech.ts";
+import { canSpeak, preloadClip, speak } from "../lib/speech.ts";
 import { framesOf, resolveFrames, resolveLooks } from "../lib/view.ts";
 import { clipUrl } from "../lib/voice.ts";
 import { yearText } from "../lib/year.ts";
-import { STORIES } from "../stories/index.ts";
+import { CARDS } from "../stories/catalog.ts";
 import type { Speaker, Story } from "../stories/types.ts";
+import { prefetchStory } from "./story-loader.ts";
 
 const NAME: Record<Speaker, string> = { nian: "小念", dad: "爸爸" };
 /** 自动念的时候，一句念完停一下再接下一句 */
@@ -42,7 +43,9 @@ export function StoryPage({ story, initialStep }: { story: Story; initialStep: n
     const stop = speak(line.who, line.say, () => {
       if (step >= last) setListening(false);
       else timer = window.setTimeout(() => go(step + 1), PAUSE);
-    }, clipUrl(story.id, line));
+    }, clipUrl(story.id, line), () => setListening(false));
+    const upcoming = story.lines[step + 1] && clipUrl(story.id, story.lines[step + 1]);
+    if (upcoming) preloadClip(upcoming);
     return () => {
       stop();
       clearTimeout(timer);
@@ -76,9 +79,19 @@ export function StoryPage({ story, initialStep }: { story: Story; initialStep: n
     mounted.current = true;
   }, [step]);
 
-  const index = STORIES.findIndex((s) => s.id === story.id);
-  const prev = STORIES[index - 1];
-  const next = STORIES[index + 1];
+  const index = CARDS.findIndex((s) => s.id === story.id);
+  const prev = CARDS[index - 1];
+  const next = CARDS[index + 1];
+
+  // 讲到中途会换图：先把后面要用的图悄悄下好，换的时候不用等
+  useEffect(() => {
+    const timer = window.setTimeout(() => {
+      for (const f of allFrames) if (f !== story.frame) new Image().src = f.src;
+    }, 800);
+    return () => clearTimeout(timer);
+  }, [allFrames, story.frame]);
+  // 看到结尾了，下一个故事多半要点
+  useEffect(() => (done && next ? prefetchStory(next.id) : undefined), [done, next]);
 
   return (
     <div className="app story-page" data-snap data-lines={story.lines.length}>

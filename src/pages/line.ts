@@ -4,7 +4,8 @@
  * 绳子是一条二次贝塞尔曲线，两头高、中间垂下去；挂件的高度跟着绳子走。
  */
 import { centuryName, centuryNote, centuryOf } from "../lib/year.ts";
-import type { Field, Story } from "../stories/types.ts";
+import type { StoryCard } from "../stories/catalog.ts";
+import type { Field } from "../stories/types.ts";
 
 export type Mode = "field" | "era";
 
@@ -15,7 +16,7 @@ export type Group = {
   readonly icon: string;
   readonly color: string;
   readonly note: string;
-  readonly stories: readonly Story[];
+  readonly stories: readonly StoryCard[];
 };
 
 export const FIELD_LOOK: Record<Field, { readonly icon: string; readonly color: string; readonly note: string }> = {
@@ -35,7 +36,7 @@ const FIELD_ORDER = Object.keys(FIELD_LOOK) as Field[];
 
 const ERA_COLORS = ["#c98b52", "#e8655b", "#ff9f43", "#43b58f", "#5b8def", "#a66cd8"];
 
-export function groupsOf(stories: readonly Story[], mode: Mode): Group[] {
+export function groupsOf(stories: readonly StoryCard[], mode: Mode): Group[] {
   const sorted = [...stories].sort((a, b) => a.year - b.year);
   if (mode === "field") {
     return FIELD_ORDER.map((f) => ({ f, list: sorted.filter((s) => s.field === f) }))
@@ -56,7 +57,7 @@ export function groupsOf(stories: readonly Story[], mode: Mode): Group[] {
 export type Slot =
   | { readonly kind: "tag"; readonly group: Group }
   | { readonly kind: "banner"; readonly group: Group }
-  | { readonly kind: "print"; readonly story: Story; readonly group: Group };
+  | { readonly kind: "print"; readonly story: StoryCard; readonly group: Group };
 
 /** 从左到右：收起的类挂一张分类牌；打开的类挂一面旗，后面跟着它的图 */
 export function slotsOf(groups: readonly Group[], open: string | null): Slot[] {

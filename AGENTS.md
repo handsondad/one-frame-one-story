@@ -13,11 +13,13 @@
 | `#/` | 晾衣绳：先只挂分类牌（按学科 / 按年代），点开一类才挂这一类的图 | `src/pages/LinePage.tsx`，挂法在 `src/pages/line.ts` |
 | `#/story/<id>/<n>` | 看图讲故事，讲到第 n 句（从 1 数） | `src/pages/StoryPage.tsx` |
 
-- `src/stories/<id>.ts`：一个故事一份数据，类型在 `src/stories/types.ts`；`src/stories/index.ts` 是列表
+- `src/stories/<id>.ts`：一个故事一份数据，类型在 `src/stories/types.ts`；`src/stories/index.ts` 是完整列表，给测试和 `tools/` 用，网页不引它
+- 网页按需加载：晾衣杆只读 `src/stories/catalog.json`（标题、简介、缩略图，`catalog.ts` 包了类型），点开故事才由 `src/stories/load.ts` 按文件名下载那一个故事（所以文件名必须就是 id）；署名清单 `credits.json` 点开「图片从哪里来」才下，`aspects.json` 是每张图的高宽比，换图时框子先占好位置。三个 json 都由 `npm run story:index`（`tools/story-index.mjs`）生成，别手改，`check` 和测试会查过期
+- `src/pages/story-loader.ts`：下载故事和故事页并缓存；晾衣杆上点开简介时就预先下
 - `src/stories/lines.ts`：`nian()`、`dad()`、`spot()` 三个写台词的小工具
 - `src/lib/view.ts`：每句话指图上哪儿（`resolveLooks`）、镜头怎么推（`viewFor`），纯函数，有测试
 - `src/components/FrameStage.tsx`：图 + 圈 + 压暗 + 推镜头
-- `src/index.css`：样子和 storyverse 一个系列——站酷快乐体（`public/fonts/story.woff`，`tools/font.mjs` 截字生成）、暖色底、3px 深色描边、圆角、按下去的橙色按钮
+- `src/index.css`：样子和 storyverse 一个系列——站酷快乐体（`public/fonts/story.woff2`，`tools/font.mjs` 截字生成，`index.html` 里预加载）、暖色底、3px 深色描边、圆角、按下去的橙色按钮
 - `src/lib/speech.ts`：念一句——有配音放配音，没有就用浏览器自带朗读
 - `src/lib/voice.ts`：配音用的声音和每句台词的指纹；`src/lib/voice-manifest.ts` 是 `npm run voice` 生成的，别手改
 - `public/voice/<故事>/<指纹>.mp3`：配音，`tools/voice.mjs` 生成
@@ -40,7 +42,7 @@
 6. `npm run snapshot -- <id> --spots` 截每一句指了圈的，`npm run sheet -- <id>` 拼成总览，看圈有没有圈对；`--width 390` 看手机。
 7. 台词定了先跑 `npm run font`（新故事里有新汉字，字体要重新截，测试会检查），再跑 `npm run voice -- <id>` 配音（要联网，需要 `python -m pip install edge-tts` 和 ffmpeg）。改过台词也要跑，测试会检查每句都有配音。
 8. 图的署名登记到 `THIRD_PARTY_NOTICES.md`，`README.md` 第一段的图片清单按年份插进去。
-9. `npm run typecheck && npm run check && npm test && npm run build`。
+9. `npm run story:index`（重新生成网页读的目录），再 `npm run typecheck && npm run check && npm test && npm run build`。
 
 ## 写台词的规矩
 

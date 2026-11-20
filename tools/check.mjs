@@ -5,6 +5,7 @@ import { dirname, join, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 import { framesOf, thumbOf } from "../src/lib/view.ts";
 import { STORIES } from "../src/stories/index.ts";
+import { staleIndex } from "./story-index.mjs";
 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), "..");
 const args = process.argv.slice(2);
@@ -60,6 +61,14 @@ for (const s of targets) {
   });
   if (pointed < 2) fail("至少要在图上指两处 spot");
   if (!s.remember.trim() || s.facts.length < 3 || !s.teaser.trim() || !s.when.trim() || !s.people.length) fail("缺少 remember/facts/teaser/when/people");
+}
+
+// 晾衣杆读的是生成好的目录，故事改了要重新生成
+try {
+  const stale = staleIndex();
+  if (stale.length) errors.push(`src/stories/${stale.join("、")} 过期了（跑 npm run story:index）`);
+} catch (err) {
+  errors.push(`生成目录失败：${err.message}`);
 }
 
 if (errors.length) {

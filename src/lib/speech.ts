@@ -19,10 +19,33 @@ function voiceFor(who: Speaker): SpeechSynthesisVoice | undefined {
     ?? zh[0];
 }
 
-/** 念一句；有配好的音频就放音频，放不了再用浏览器朗读。念完时调 onEnd，返回停止函数 */
-export function speak(who: Speaker, text: string, onEnd: () => void, clip?: string): () => void {
+/** 下一句的音频先下着；轮到它时直接拿来放 */
+let upcoming: { url: string; audio: HTMLAudioElement } | null = null;
+
+export function preloadClip(url: string) {
+  if (upcoming?.url === url) return;
+  const audio = new Audio();
+  audio.preload = "auto";
+  audio.src = url;
+  upcoming = { url, audio };
+}
+
+function audioFor(url: string): HTMLAudioElement {
+  if (upcoming?.url === url) {
+    const { audio } = upcoming;
+    upcoming = null;
+    return audio;
+  }
+  return new Audio(url);
+}
+
+/**
+ * 念一句；有配好的音频就放音频，放不了再用浏览器朗读。念完时调 onEnd，返回停止函数。
+ * 浏览器不让放声音（用户还没跟页面互动过）时调 onBlocked
+ */
+export function speak(who: Speaker, text: string, onEnd: () => void, clip?: string, onBlocked?: () => void): () => void {
   if (!clip) return synth(who, text, onEnd);
-  const audio = new Audio(clip);
+  const audio = audioFor(clip);
   let stopped = false;
   let stopSynth = () => {};
   const fallback = () => {
@@ -33,8 +56,9 @@ export function speak(who: Speaker, text: string, onEnd: () => void, clip?: stri
   };
   audio.onerror = fallback;
   audio.play().catch((err: unknown) => {
-    // 用户还没跟页面互动过时浏览器不让自动放声音，这种情况朗读也一样放不了，就停在这句
+    // 这种情况朗读也一样放不了，就停在这句，让按钮变回「听故事」
     if (!(err instanceof DOMException && err.name === "NotAllowedError")) fallback();
+    else if (!stopped) onBlocked?.();
   });
   return () => {
     stopped = true;

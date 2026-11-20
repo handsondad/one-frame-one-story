@@ -11,6 +11,7 @@
     "check": "node tools/check.mjs",
     "test": "node --test tests/*.test.mjs",
     "story:new": "node tools/new-story.mjs",
+    "story:index": "node tools/story-index.mjs",
     "frames": "node tools/fetch-frames.mjs",
     "snapshot": "node tools/snapshot.mjs",
     "grid": "node tools/grid.mjs",

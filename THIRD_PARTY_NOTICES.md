@@ -100,7 +100,7 @@
 
 ## 字体
 
-`public/fonts/story.woff` 是从 [站酷快乐体（ZCOOL KuaiLe）](https://fonts.google.com/specimen/ZCOOL+KuaiLe) 里截出网站用到的字生成的，许可是 SIL Open Font License 1.1，全文见 `public/fonts/OFL.txt`。
+`public/fonts/story.woff2` 是从 [站酷快乐体（ZCOOL KuaiLe）](https://fonts.google.com/specimen/ZCOOL+KuaiLe) 里截出网站用到的字生成的，许可是 SIL Open Font License 1.1，全文见 `public/fonts/OFL.txt`。
 
 ## 配音（Microsoft Edge 在线语音）
 

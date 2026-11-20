@@ -1,10 +1,11 @@
 import assert from "node:assert/strict";
-import { existsSync } from "node:fs";
+import { existsSync, readdirSync } from "node:fs";
 import { dirname, join, resolve } from "node:path";
 import { test } from "node:test";
-import { fileURLToPath } from "node:url";
+import { fileURLToPath, pathToFileURL } from "node:url";
 import { framesOf, thumbOf } from "../src/lib/view.ts";
 import { STORIES } from "../src/stories/index.ts";
+import { INDEX_DIR, staleIndex } from "../tools/story-index.mjs";
 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), "..");
 const spotsOf = (look) => (!look || look === "all" ? [] : Array.isArray(look) ? look : [look]);
@@ -18,6 +19,22 @@ test("故事 id 唯一，只用小写字母、数字和短横线", () => {
 test("晾衣杆从早到晚排", () => {
   const years = STORIES.map((s) => s.year);
   assert.deepEqual(years, [...years].sort((a, b) => a - b));
+});
+
+test("网页读的目录（src/stories/*.json）是最新的", () => {
+  assert.deepEqual(staleIndex(), [], "跑 npm run story:index");
+});
+
+// 网页按文件名去下故事（src/stories/load.ts），文件名必须就是 id
+test("每个故事文件名都是它的 id，而且都登记了", async () => {
+  const helpers = ["index.ts", "types.ts", "lines.ts", "load.ts", "catalog.ts"];
+  const files = readdirSync(INDEX_DIR).filter((f) => f.endsWith(".ts") && !helpers.includes(f));
+  for (const f of files) {
+    const mod = await import(pathToFileURL(join(INDEX_DIR, f)).href);
+    const id = f.slice(0, -3);
+    assert.ok(Object.values(mod).some((v) => v?.id === id && Array.isArray(v.lines)), `${f} 里没有 id 为 ${id} 的故事`);
+  }
+  assert.deepEqual(files.map((f) => f.slice(0, -3)).sort(), STORIES.map((s) => s.id).sort());
 });
 
 for (const story of STORIES) {
