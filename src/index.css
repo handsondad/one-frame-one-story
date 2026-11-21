@@ -158,6 +158,10 @@ a { color: var(--accent-blue-deep); }
   box-shadow: 0 0 0 5px var(--accent-orange), 0 12px 0 rgba(61, 48, 39, 0.18);
 }
 .mini { display: block; flex: none; border-radius: 50%; object-fit: cover; background: #fffaf0; }
+.mini.letter {
+  display: grid; place-items: center; font-size: 15px; line-height: 1;
+  background: color-mix(in srgb, var(--c, #e0702a) 18%, #fffaf0); color: color-mix(in srgb, var(--c, #e0702a) 70%, #000);
+}
 
 /* 打开的一类：一面三角旗，点它收起 */
 .banner-cloth {
@@ -219,6 +223,8 @@ a { color: var(--accent-blue-deep); }
   background: color-mix(in srgb, var(--c) 14%, #fff); border: 3px dashed color-mix(in srgb, var(--c) 45%, transparent);
 }
 .group-preview .mosaic .mini { width: 100%; height: auto; aspect-ratio: 1; border: 3px solid var(--ink); }
+.group-preview .mosaic .mini.letter { font-size: clamp(22px, 3vw, 32px); }
+.group-preview .mosaic-hint { grid-column: 1 / -1; text-align: center; font-size: 14px; color: var(--text-muted); }
 .group-preview .kids { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 16px; }
 .group-preview .kid {
   padding: 2px 12px; border-radius: 999px; font-size: 16px; text-decoration: none; color: var(--ink);
