@@ -20,7 +20,7 @@ export const kunyuMap: Story = {
   when: "1602 年，北京",
   field: "地理",
   people: ["利玛窦", "李之藻"],
-  teaser: "四百多年前，一张大地图第一次把五大洲画给中国人看。",
+  teaser: "四百多年前，一张大地图把五大洲画给了中国人看。",
   frame: {
     src: "frames/kunyu-map.jpg",
     alt: "一张横着的古代世界地图，五大洲涂着不同的颜色，到处写满汉字；中间偏左是中国，右边是美洲，最下面一长条是一片很大的南方大陆",
@@ -61,7 +61,7 @@ export const kunyuMap: Story = {
     dad("是两个小地球：上面这个画的是北半球，下面这个画的是南半球。就像把一个橘子从中间切开，分别从上面和下面看。"),
 
     nian("右边那一大块是哪儿？", { part: "五大洲", look: americas }),
-    dad("是美洲，地图上叫“南北亚墨利加”。这是中国人第一次在地图上看到美洲。"),
+    dad("是美洲，地图上叫“南北亚墨利加”。这是今天还能看到的、最早画着美洲的中文地图。"),
     nian("以前大家不知道有美洲吗？"),
     dad("不光中国，欧洲人也是在一百多年前才坐船到了那里。利玛窦在地图上也写了这件事。"),
     nian("左边呢？", { look: europe }),
@@ -90,9 +90,9 @@ export const kunyuMap: Story = {
     nian("1602 年印的那种，现在还多吗？"),
     dad("全世界只剩几幅了。2009 年，美国的一家图书馆花一百万美元买下了一幅。"),
     nian("一张地图那么贵！"),
-    dad("因为它记下了一件大事：四百多年前，中国人第一次在一张地图上，看到了整个世界。"),
+    dad("因为它记下了一件大事：四百多年前，中国人在一张地图上看到了整个世界。利玛窦更早画的几版都没能留下来，它是今天能看到的最早的一张。"),
   ],
-  remember: "地球是圆的，每张地图都要选一个中间；这张图第一次把五大洲画给了中国人看。",
+  remember: "地球是圆的，每张地图都要选一个中间；这张图把五大洲画给了四百多年前的中国人看。",
   facts: [
     ["这张图", "《坤舆万国全图》的彩色摹本，日本东北大学图书馆藏"],
     ["原版", "1602 年在北京刻版印刷，六幅拼成"],
@@ -104,6 +104,7 @@ export const kunyuMap: Story = {
     { title: "Wikimedia Commons：Kunyu Wanguo Quantu (坤輿萬國全圖)", url: "https://commons.wikimedia.org/wiki/File:Kunyu_Wanguo_Quantu_(%E5%9D%A4%E8%BC%BF%E8%90%AC%E5%9C%8B%E5%85%A8%E5%9C%96).jpg" },
     { title: "Library of Congress：Rare Matteo Ricci World Map on Display (2010)", url: "https://loc.gov/today/pr/2010/10-002.html" },
     { title: "Library of Congress：Jonathan Spence on the Ricci map", url: "https://loc.gov/loc/lcib/1005/map.html" },
+    { title: "Wikipedia：Kunyu Wanguo Quantu", url: "https://en.wikipedia.org/wiki/Kunyu_Wanguo_Quantu" },
     { title: "Library of Congress：坤輿萬國全圖 catalog record", url: "https://loc.gov/item/2010585650" },
     { title: "舆图记：坤舆万国全图（序跋原文）", url: "https://yutuji.com/kunyu/" },
     { title: "MPR News：The 'black tulip' map comes to Minnesota (2010)", url: "https://www.mprnews.org/story/2010/01/12/blacktulip-map" },

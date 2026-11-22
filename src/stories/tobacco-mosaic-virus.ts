@@ -79,7 +79,7 @@ export const tobaccoMosaicVirus: Story = {
     nian("小棍子里面是什么？", { part: "一根空心管", look: loneRod }),
     dad("后来，罗莎琳德·富兰克林发现，它其实是一根空心管，外面是一圈圈蛋白质，里面盘着它的遗传物质。"),
     nian("就是拍“照片 51 号”的富兰克林？"),
-    dad("就是她。她还用二百多个自行车把手套做了一个病毒模型。1958 年她去世的时候，布鲁塞尔世界博览会刚开幕，展出的正是她的病毒模型。"),
+    dad("就是她。她的小组还用二百多个自行车把手套搭过病毒模型。1958 年 4 月她因病去世，第二天，布鲁塞尔世界博览会开幕，里面就展出了他们做的烟草花叶病毒模型。"),
     nian("一根小棍子，藏了这么多故事！"),
   ],
   remember: "烟草花叶病毒细得连光都“摸”不出来，直到有了电子显微镜，1939 年人们才第一次看清它是一根根小棍子。",
@@ -104,6 +104,8 @@ export const tobaccoMosaicVirus: Story = {
     { title: "Nobel Prize：Wendell M. Stanley Biographical", url: "https://www.nobelprize.org/prizes/chemistry/1946/stanley/biographical/" },
     { title: "PLOS ONE（2013）：Plant viruses and humans", url: "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0060621" },
     { title: "IUCr Journals（2020）：Rosalind Franklin and the tobacco mosaic virus", url: "https://journals.iucr.org/d/issues/2020/07/00/me6088/" },
+    { title: "Britannica：Rosalind Franklin", url: "https://www.britannica.com/biography/Rosalind-Franklin" },
+    { title: "Wikipedia：Expo 58（1958 年布鲁塞尔世博会，4 月 17 日开幕）", url: "https://en.wikipedia.org/wiki/Expo_58" },
     { title: "Chem（Cell Press, 2021）：Rosalind Franklin's TMV work", url: "https://www.cell.com/chem/fulltext/S2451-9294(21)00100-5" },
   ],
 };

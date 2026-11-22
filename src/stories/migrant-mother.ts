@@ -70,11 +70,11 @@ export const migrantMother: Story = {
     dad("直到四十多年后的 1978 年，一位记者才找到她：她叫弗洛伦斯·欧文斯·汤普森，是有切罗基原住民血统的母亲，一生靠双手辛苦抚养大了十个孩子。"),
     nian("她喜欢这张照片吗？"),
     dad("一开始她心里有些委屈：照片印遍了全世界，她却一分钱也没得到过，孩子们小时候还怕别人知道家里那么穷。"),
-    dad("可是在 1983 年她生了重病的时候，全美国各地的普通人寄来了两千多封信和三万多美元帮她看病。许多人在信里写：“最难熬的日子里，是您妈妈的眼神给了我们撑下去的力气。”"),
+    dad("可是在 1983 年她生了重病的时候，全美国各地的普通人寄来了两千多封信和三万多美元帮她看病。许多人在信里说，这张照片曾经深深打动过他们。"),
     nian("她的孩子们看到信一定很骄傲吧？", { look: "all" }),
-    dad("是呀，她的儿子说，从那一刻起，全家人终于明白妈妈当年那双眼睛有多了不起。"),
+    dad("是呀，她的儿子说：“对妈妈和我们来说，这张照片一直有点像个包袱。那些信寄来以后，我想，它让我们有了一种骄傲。”"),
   ],
-  remember: "多萝西娅·兰格在雨天掉头拍下的《移居的母亲》，当天就为饥饿的营地换来了救急粮，也让无数人在艰难岁月里记住了这位普通母亲坚韧的眼神。",
+  remember: "多萝西娅·兰格在雨天掉头拍下的《移居的母亲》，几天之内就为饥饿的营地换来了救急粮，也让无数人在艰难岁月里记住了这位普通母亲坚韧的眼神。",
   facts: [
     ["这张图", "《移居的母亲》，多萝西娅·兰格摄（4×5 英寸大画幅相机）"],
     ["时间与地点", "1936 年 3 月初，美国加州尼波莫冻雨受灾的豌豆采摘营地"],
@@ -89,5 +89,6 @@ export const migrantMother: Story = {
     { title: "MoMA Learning：Dorothea Lange, Migrant Mother, Nipomo, California", url: "https://www.moma.org/learn/moma_learning/dorothea-lange-migrant-mother-nipomo-california-1936/" },
     { title: "Getty Museum：Migrant Mother 教学与史料档案", url: "https://www.getty.edu/education/k-12-learning/explore-human-erosion-migrant-mother/" },
     { title: "Smithsonian 美国国家历史博物馆：Florence Thompson 与兰格相机档案", url: "https://americanhistory.si.edu/collections/object/nmah_1313354" },
+    { title: "Wikipedia：Florence Owens Thompson", url: "https://en.wikipedia.org/wiki/Florence_Owens_Thompson" },
   ],
 };

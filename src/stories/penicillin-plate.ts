@@ -24,7 +24,7 @@ export const penicillinPlate: Story = {
     license: "CC BY 4.0",
     commons: "File:Culture plate of penicillium mould, London, England Wellcome L0059173.jpg",
     page: "https://commons.wikimedia.org/wiki/File:Culture_plate_of_penicillium_mould,_London,_England_Wellcome_L0059173.jpg",
-    note: "这是伦敦科学博物馆 1963 年照着弗莱明发现青霉素的那个培养皿做的复制品，原来那个盘子没有留下来。",
+    note: "这是伦敦科学博物馆 1963 年照着弗莱明发现青霉素的那个培养皿做的复制品。原来那个盘子早已干透，收藏在大英图书馆。",
     dark: true,
   },
   lines: [
@@ -32,7 +32,7 @@ export const penicillinPlate: Story = {
     dad("这叫培养皿，是科学家用来养细菌的小盘子。那些小圆点，每一个都是一大群细菌挤在一起，叫“菌落”。"),
     nian("养细菌干什么？"),
     dad("为了研究它们。1928 年，伦敦一家医院里的弗莱明医生，就在养一种会让伤口化脓的细菌，叫葡萄球菌。"),
-    dad("先说清楚：这是博物馆 1963 年照着弗莱明那个盘子做的复制品，原来的盘子没有留下来。", { look: "all" }),
+    dad("先说清楚：这是博物馆 1963 年照着弗莱明那个盘子做的复制品。原来的盘子还在，可里面的东西早就干成薄薄一层，看不清了，现在收在大英图书馆。", { look: "all" }),
 
     nian("右上角那团灰白色的是什么？", { part: "度假回来", look: mould }),
     dad("是一团霉菌，就像面包放久了长出来的那种毛毛。"),
@@ -64,7 +64,7 @@ export const penicillinPlate: Story = {
     nian("牛津的人怎么养那么多霉菌？", { part: "便盆工厂" }),
     dad("那时候正在打仗，什么都缺。希特利用饼干桶、牛奶桶、浴缸，甚至医院的便盆来养霉菌。"),
     nian("便盆！"),
-    dad("后来他设计了一种专门的陶瓷盆，一下子做了七百个，还请了一些姑娘专门照看。"),
+    dad("后来他设计了一种专门的陶瓷盆，前后一共做了七百个，还请了一些姑娘专门照看。"),
     nian("养那么多，能做多少药？"),
     dad("很少。大约两千升霉菌汤，才够一个病人用。"),
     nian("第一个病人好了吗？"),
@@ -111,5 +111,6 @@ export const penicillinPlate: Story = {
     { title: "NHS：Antibiotics", url: "https://www.nhs.uk/medicines/antibiotics/" },
     { title: "International Churchill Society：Sir Alexander Fleming twice saved Churchill's life（myth）", url: "https://winstonchurchill.org/resources/myths/sir-alexander-fleming-twice-saved-churchills-life/" },
     { title: "Science Museum Blog：Keeping history alive", url: "https://blog.sciencemuseum.org.uk/keeping-history-alive/" },
+    { title: "British Library：Fleming Papers, Add MS 56209（1928 年培养皿）", url: "https://searcharchives.bl.uk/catalog/040-001950985" },
   ],
 };
