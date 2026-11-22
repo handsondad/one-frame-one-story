@@ -35,22 +35,30 @@ export function StoryPage({ story, initialStep }: { story: Story; initialStep: n
     setStep(Math.max(0, Math.min(last, to)));
   }, [last]);
 
-  // 自动念：念完一句，停一下，翻到下一句；最后一句念完就停
+  // 自动念：念的是亮着的那一句（点了前面某句就从那句念）；念完停一下接下一句，
+  // 已经展开的句子只挪高亮，没展开的再往下翻；最后一句念完就停
   useEffect(() => {
     if (!listening) return;
-    const line = story.lines[step];
+    const at = shownLine;
+    const line = story.lines[at];
     let timer = 0;
     const stop = speak(line.who, line.say, () => {
-      if (step >= last) setListening(false);
-      else timer = window.setTimeout(() => go(step + 1), PAUSE);
+      if (at >= last) setListening(false);
+      else timer = window.setTimeout(() => (at + 1 < step ? setPinned(at + 1) : go(at + 1)), PAUSE);
     }, clipUrl(story.id, line), () => setListening(false));
-    const upcoming = story.lines[step + 1] && clipUrl(story.id, story.lines[step + 1]);
+    const upcoming = story.lines[at + 1] && clipUrl(story.id, story.lines[at + 1]);
     if (upcoming) preloadClip(upcoming);
     return () => {
       stop();
       clearTimeout(timer);
     };
-  }, [listening, step, story, last, go]);
+  }, [listening, shownLine, step, story, last, go]);
+
+  const toggleListening = () => {
+    // 全部展开了再点「听故事」，从第一句念起，而不是只念最后一句
+    if (!listening && pinned === null && step === last && last > 0) setPinned(0);
+    setListening((v) => !v);
+  };
   useEffect(() => () => {
     if (canSpeak()) speechSynthesis.cancel();
   }, []);
@@ -70,14 +78,14 @@ export function StoryPage({ story, initialStep }: { story: Story; initialStep: n
     return () => removeEventListener("keydown", on);
   }, [go, step]);
 
-  // 新冒出来的一句滚到看得见的地方
+  // 新冒出来的一句、正在念的那一句，滚到看得见的地方
   const latest = useRef<HTMLLIElement>(null);
   const mounted = useRef(false);
   useEffect(() => {
     if (!mounted.current) scrollTo(0, 0);
     latest.current?.scrollIntoView({ behavior: mounted.current ? "smooth" : "auto", block: "nearest" });
     mounted.current = true;
-  }, [step]);
+  }, [shownLine]);
 
   const index = CARDS.findIndex((s) => s.id === story.id);
   const prev = CARDS[index - 1];
@@ -100,7 +108,7 @@ export function StoryPage({ story, initialStep }: { story: Story; initialStep: n
         <span className="topbar-title"><span className="yr">{yearText(story)}</span>{story.frameName}</span>
         {(canSpeak() || hasClips) && (
           <button type="button" className={listening ? "btn play small on" : "btn play small"} aria-pressed={listening}
-            onClick={() => setListening((v) => !v)}>
+            onClick={toggleListening}>
             {listening ? "■ 停下" : "▶ 听故事"}
           </button>
         )}
@@ -126,7 +134,7 @@ export function StoryPage({ story, initialStep }: { story: Story; initialStep: n
 
           <ol className="talk">
             {story.lines.slice(0, step + 1).map((line, i) => (
-              <li key={i} ref={i === step ? latest : undefined}>
+              <li key={i} ref={i === shownLine ? latest : undefined}>
                 {line.part && <h2 className="part"><span>{line.part}</span></h2>}
                 <button type="button"
                   className={`say ${line.who}${i === shownLine ? " current" : ""}${looks[i].length ? " points" : ""}`}
