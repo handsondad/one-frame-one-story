@@ -27,7 +27,7 @@
 - `tools/fetch-frames.mjs`：从 Commons 下载图片、生成缩略图；`tools/draw-photo51.mjs`、`draw-atom-trap.mjs`、`draw-nano.mjs`：画没有开放许可的图的示意图（照片 51 号的斑点、单个原子、IBM 原子字和并五苯）
 - `tools/new-story.mjs`（`npm run story:new -- <id>`）：生成新故事骨架并自动注册到 `src/stories/index.ts`；`tools/check.mjs`（`npm run check [-- <id> | --stats]`）：检查故事规则、图片、长度与学科分布
 - `tools/snapshot.mjs`：无头浏览器截图；`tools/grid.mjs`：给图画网格读 `spot` 坐标；`tools/sheet.mjs`：把几张截图里的图拼成总览，核对圈
-- `skills/add-story/`（镜像于 `.agents/skills/add-story/` 与 `.cursor/skills/add-story/`）：加故事、换图的一步步做法（清单、查资料的提示词模板），下面是要点
+- `skills/add-story/`：加故事、换图的一步步做法（清单、查资料的提示词模板），下面是要点
 
 ## 加一个故事
 

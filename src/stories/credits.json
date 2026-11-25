@@ -71,6 +71,7 @@
   {"src":"frames/earthrise.jpg","name":"地出","year":1968,"by":"NASA / 比尔·安德斯","license":"公有领域","page":"https://commons.wikimedia.org/wiki/File:NASA-Apollo8-Dec24-Earthrise.jpg"},
   {"src":"frames/moon-aldrin.jpg","name":"登月者","year":1969,"by":"尼尔·阿姆斯特朗摄，NASA（AS11-40-5903）","license":"公有领域（NASA）","page":"https://commons.wikimedia.org/wiki/File:Aldrin_Apollo_11_original.jpg"},
   {"src":"frames/moon-aldrin-release.jpg","name":"大家常见的版本（转正、补了黑天）","year":1969,"by":"尼尔·阿姆斯特朗摄，NASA 发布时修整","license":"公有领域（NASA）","page":"https://commons.wikimedia.org/wiki/File:Aldrin_Apollo_11.jpg"},
+  {"src":"frames/arecibo-message.jpg","name":"阿雷西博信息（带英文标注）","year":1974,"by":"信息由弗兰克·德雷克设计（卡尔·萨根等协助）；图据维基共享资源 Arne Nordmann（norro）绘制的版本","license":"CC BY-SA 3.0（署名-相同方式共享）；本站只作非商业学习用途","page":"https://commons.wikimedia.org/wiki/File:Arecibo_message.svg"},
   {"src":"frames/voyager-1.jpg","name":"旅行者 1 号与金唱片","year":1977,"by":"NASA / JPL-Caltech","license":"公有领域（NASA / JPL-Caltech）","page":"https://science.nasa.gov/mission/voyager/"},
   {"src":"frames/voyager-golden-record.jpg","name":"旅行者 1 号携带的“旅行者金唱片”护套","year":1977,"by":"NASA / JPL（卡尔·萨根、弗兰克·德雷克等设计护套图案）","license":"公有领域（NASA / JPL）","page":"https://science.nasa.gov/mission/voyager/golden-record-cover/"},
   {"src":"frames/voyager-pale-blue-dot-box.jpg","name":"60 亿千米外的回眸：红框里就是地球（暗淡蓝点）","year":1977,"by":"NASA / JPL-Caltech，旅行者 1 号拍摄（2020 年重制版，红框标出地球）","license":"公有领域（NASA / JPL-Caltech）","page":"https://science.nasa.gov/photojournal/pale-blue-dot-revisited/"},

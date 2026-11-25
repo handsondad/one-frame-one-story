@@ -61,6 +61,7 @@ import { trinityTest } from "./trinity-test.ts";
 import { tuYouyou } from "./tu-youyou.ts";
 import { turingPortrait } from "./turing-portrait.ts";
 import type { Story } from "./types.ts";
+import { areciboMessage } from "./arecibo-message.ts";
 import { vitruvianMan } from "./vitruvian-man.ts";
 import { voyager1 } from "./voyager-1.ts";
 import { wegenerContinents } from "./wegener-continents.ts";
@@ -134,6 +135,7 @@ export const STORIES: readonly Story[] = [
   turingPortrait,
   huaLuogeng,
   tuYouyou,
+  areciboMessage,
 ].sort((a, b) => a.year - b.year);
 
 export const storyById = (id: string) => STORIES.find((s) => s.id === id);

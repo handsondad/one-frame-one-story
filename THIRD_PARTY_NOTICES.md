@@ -64,6 +64,7 @@
 | 地出（1968） | NASA / Bill Anders | 公有领域 | [NASA-Apollo8-Dec24-Earthrise.jpg](https://commons.wikimedia.org/wiki/File:NASA-Apollo8-Dec24-Earthrise.jpg) |
 | 登月者（1969，原始底片） | Neil Armstrong，NASA（AS11-40-5903） | 公有领域 | [Aldrin Apollo 11 original.jpg](https://commons.wikimedia.org/wiki/File:Aldrin_Apollo_11_original.jpg) |
 | 登月者（NASA 发布时修整的版本） | Neil Armstrong，NASA | 公有领域 | [Aldrin Apollo 11.jpg](https://commons.wikimedia.org/wiki/File:Aldrin_Apollo_11.jpg) |
+| 阿雷西博信息解读示意图（1974 年的消息，带英文标注） | 信息由弗兰克·德雷克设计、卡尔·萨根等协助；图据 Arne Nordmann（norro）在维基共享资源发布的版本 | [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/) | [Arecibo message.svg](https://commons.wikimedia.org/wiki/File:Arecibo_message.svg) |
 | 旅行者 1 号探测器太空飞行示意图 | NASA / JPL-Caltech | 公有领域 | [NASA Voyager Mission](https://science.nasa.gov/mission/voyager/) |
 | 旅行者金唱片护套（1977） | NASA / JPL（Carl Sagan、Frank Drake 等设计） | 公有领域 | [Golden Record Cover](https://science.nasa.gov/mission/voyager/golden-record-cover/) |
 | 暗淡蓝点（1990 拍摄，2020 重制版红框标出地球） | NASA / JPL-Caltech，Voyager 1 | 公有领域 | [Pale Blue Dot Revisited](https://science.nasa.gov/photojournal/pale-blue-dot-revisited/) |
